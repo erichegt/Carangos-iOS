@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55538CC8FBE247B3A3F53F8D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD30E15B1844F1FBF7CFA72 /* libPods.a */; };
+		773C3D9F16E13BD300F1A042 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3D9E16E13BD300F1A042 /* UIKit.framework */; };
+		773C3DA116E13BD300F1A042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3DA016E13BD300F1A042 /* Foundation.framework */; };
+		773C3DA316E13BD300F1A042 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3DA216E13BD300F1A042 /* CoreGraphics.framework */; };
+		773C3DA516E13BD300F1A042 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3DA416E13BD300F1A042 /* CoreData.framework */; };
+		773C3DAB16E13BD300F1A042 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DA916E13BD300F1A042 /* InfoPlist.strings */; };
+		773C3DAD16E13BD300F1A042 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DAC16E13BD300F1A042 /* main.m */; };
+		773C3DB116E13BD300F1A042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DB016E13BD300F1A042 /* AppDelegate.m */; };
+		773C3DB316E13BD300F1A042 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DB216E13BD300F1A042 /* Default.png */; };
+		773C3DB516E13BD300F1A042 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DB416E13BD300F1A042 /* Default@2x.png */; };
+		773C3DB716E13BD300F1A042 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DB616E13BD300F1A042 /* Default-568h@2x.png */; };
+		773C3DBA16E13BD300F1A042 /* Carangos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DB816E13BD300F1A042 /* Carangos.xcdatamodeld */; };
+		773C3DBD16E13BD300F1A042 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DBC16E13BD300F1A042 /* MasterViewController.m */; };
+		773C3DC016E13BD300F1A042 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DBF16E13BD300F1A042 /* DetailViewController.m */; };
+		773C3DC316E13BD300F1A042 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DC116E13BD300F1A042 /* MasterViewController.xib */; };
+		773C3DC616E13BD300F1A042 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DC416E13BD300F1A042 /* DetailViewController.xib */; };
+		773C3DCE16E13BD300F1A042 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3DCD16E13BD300F1A042 /* SenTestingKit.framework */; };
+		773C3DCF16E13BD300F1A042 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3D9E16E13BD300F1A042 /* UIKit.framework */; };
+		773C3DD016E13BD300F1A042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3DA016E13BD300F1A042 /* Foundation.framework */; };
+		773C3DD116E13BD300F1A042 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3DA416E13BD300F1A042 /* CoreData.framework */; };
+		773C3DD916E13BD300F1A042 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DD716E13BD300F1A042 /* InfoPlist.strings */; };
+		773C3DDC16E13BD300F1A042 /* CarangosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DDB16E13BD300F1A042 /* CarangosTests.m */; };
+		773C3DF516E1428100F1A042 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DF416E1428100F1A042 /* DataSource.m */; };
+		773C3DFC16E142E400F1A042 /* PostsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DFA16E142E400F1A042 /* PostsControllerViewController.m */; };
+		773C3DFD16E142E400F1A042 /* PostsControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DFB16E142E400F1A042 /* PostsControllerViewController.xib */; };
+		773C3E0D16E1660000F1A042 /* Automovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E0C16E1660000F1A042 /* Automovel.m */; };
+		773C3E2016E1666F00F1A042 /* ModeloDeAutomovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E1D16E1666E00F1A042 /* ModeloDeAutomovel.m */; };
+		773C3E2116E1666F00F1A042 /* Marca.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E1F16E1666E00F1A042 /* Marca.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		773C3DD216E13BD300F1A042 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 773C3D9116E13BD300F1A042 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 773C3D9916E13BD300F1A042;
+			remoteInfo = Carangos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6DBB393D6B5443228D3F7A1A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		773C3D9A16E13BD300F1A042 /* Carangos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carangos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		773C3D9E16E13BD300F1A042 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		773C3DA016E13BD300F1A042 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		773C3DA216E13BD300F1A042 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		773C3DA416E13BD300F1A042 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		773C3DA816E13BD300F1A042 /* Carangos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Carangos-Info.plist"; sourceTree = "<group>"; };
+		773C3DAA16E13BD300F1A042 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		773C3DAC16E13BD300F1A042 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		773C3DAE16E13BD300F1A042 /* Carangos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Carangos-Prefix.pch"; sourceTree = "<group>"; };
+		773C3DAF16E13BD300F1A042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		773C3DB016E13BD300F1A042 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		773C3DB216E13BD300F1A042 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		773C3DB416E13BD300F1A042 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		773C3DB616E13BD300F1A042 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		773C3DB916E13BD300F1A042 /* Carangos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Carangos.xcdatamodel; sourceTree = "<group>"; };
+		773C3DBB16E13BD300F1A042 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		773C3DBC16E13BD300F1A042 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		773C3DBE16E13BD300F1A042 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		773C3DBF16E13BD300F1A042 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		773C3DC216E13BD300F1A042 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		773C3DC516E13BD300F1A042 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		773C3DCC16E13BD300F1A042 /* CarangosTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarangosTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		773C3DCD16E13BD300F1A042 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		773C3DD616E13BD300F1A042 /* CarangosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarangosTests-Info.plist"; sourceTree = "<group>"; };
+		773C3DD816E13BD300F1A042 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		773C3DDA16E13BD300F1A042 /* CarangosTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarangosTests.h; sourceTree = "<group>"; };
+		773C3DDB16E13BD300F1A042 /* CarangosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarangosTests.m; sourceTree = "<group>"; };
+		773C3DF316E1428000F1A042 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		773C3DF416E1428100F1A042 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		773C3DF916E142E400F1A042 /* PostsControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsControllerViewController.h; sourceTree = "<group>"; };
+		773C3DFA16E142E400F1A042 /* PostsControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsControllerViewController.m; sourceTree = "<group>"; };
+		773C3DFB16E142E400F1A042 /* PostsControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostsControllerViewController.xib; sourceTree = "<group>"; };
+		773C3E0B16E1660000F1A042 /* Automovel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Automovel.h; sourceTree = "<group>"; };
+		773C3E0C16E1660000F1A042 /* Automovel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Automovel.m; sourceTree = "<group>"; };
+		773C3E1C16E1666E00F1A042 /* ModeloDeAutomovel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeloDeAutomovel.h; sourceTree = "<group>"; };
+		773C3E1D16E1666E00F1A042 /* ModeloDeAutomovel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeloDeAutomovel.m; sourceTree = "<group>"; };
+		773C3E1E16E1666E00F1A042 /* Marca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marca.h; sourceTree = "<group>"; };
+		773C3E1F16E1666E00F1A042 /* Marca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marca.m; sourceTree = "<group>"; };
+		BAD30E15B1844F1FBF7CFA72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		773C3D9716E13BD300F1A042 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				773C3D9F16E13BD300F1A042 /* UIKit.framework in Frameworks */,
+				773C3DA116E13BD300F1A042 /* Foundation.framework in Frameworks */,
+				773C3DA316E13BD300F1A042 /* CoreGraphics.framework in Frameworks */,
+				773C3DA516E13BD300F1A042 /* CoreData.framework in Frameworks */,
+				55538CC8FBE247B3A3F53F8D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		773C3DC816E13BD300F1A042 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				773C3DCE16E13BD300F1A042 /* SenTestingKit.framework in Frameworks */,
+				773C3DCF16E13BD300F1A042 /* UIKit.framework in Frameworks */,
+				773C3DD016E13BD300F1A042 /* Foundation.framework in Frameworks */,
+				773C3DD116E13BD300F1A042 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		773C3D8F16E13BD300F1A042 = {
+			isa = PBXGroup;
+			children = (
+				773C3DA616E13BD300F1A042 /* Carangos */,
+				773C3DD416E13BD300F1A042 /* CarangosTests */,
+				773C3D9D16E13BD300F1A042 /* Frameworks */,
+				773C3D9B16E13BD300F1A042 /* Products */,
+				6DBB393D6B5443228D3F7A1A /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		773C3D9B16E13BD300F1A042 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				773C3D9A16E13BD300F1A042 /* Carangos.app */,
+				773C3DCC16E13BD300F1A042 /* CarangosTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		773C3D9D16E13BD300F1A042 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				773C3D9E16E13BD300F1A042 /* UIKit.framework */,
+				773C3DA016E13BD300F1A042 /* Foundation.framework */,
+				773C3DA216E13BD300F1A042 /* CoreGraphics.framework */,
+				773C3DA416E13BD300F1A042 /* CoreData.framework */,
+				773C3DCD16E13BD300F1A042 /* SenTestingKit.framework */,
+				BAD30E15B1844F1FBF7CFA72 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		773C3DA616E13BD300F1A042 /* Carangos */ = {
+			isa = PBXGroup;
+			children = (
+				773C3DFF16E14A6B00F1A042 /* Persistencia */,
+				773C3DF716E1429700F1A042 /* DataSources */,
+				773C3DF616E1428500F1A042 /* Controllers */,
+				773C3DAF16E13BD300F1A042 /* AppDelegate.h */,
+				773C3DB016E13BD300F1A042 /* AppDelegate.m */,
+				773C3DA716E13BD300F1A042 /* Supporting Files */,
+			);
+			path = Carangos;
+			sourceTree = "<group>";
+		};
+		773C3DA716E13BD300F1A042 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				773C3DA816E13BD300F1A042 /* Carangos-Info.plist */,
+				773C3DA916E13BD300F1A042 /* InfoPlist.strings */,
+				773C3DAC16E13BD300F1A042 /* main.m */,
+				773C3DAE16E13BD300F1A042 /* Carangos-Prefix.pch */,
+				773C3DB216E13BD300F1A042 /* Default.png */,
+				773C3DB416E13BD300F1A042 /* Default@2x.png */,
+				773C3DB616E13BD300F1A042 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		773C3DD416E13BD300F1A042 /* CarangosTests */ = {
+			isa = PBXGroup;
+			children = (
+				773C3DDA16E13BD300F1A042 /* CarangosTests.h */,
+				773C3DDB16E13BD300F1A042 /* CarangosTests.m */,
+				773C3DD516E13BD300F1A042 /* Supporting Files */,
+			);
+			path = CarangosTests;
+			sourceTree = "<group>";
+		};
+		773C3DD516E13BD300F1A042 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				773C3DD616E13BD300F1A042 /* CarangosTests-Info.plist */,
+				773C3DD716E13BD300F1A042 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		773C3DF616E1428500F1A042 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				773C3DFE16E14A5100F1A042 /* Automovel */,
+				773C3DF816E142B000F1A042 /* Posts */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		773C3DF716E1429700F1A042 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				773C3DF316E1428000F1A042 /* DataSource.h */,
+				773C3DF416E1428100F1A042 /* DataSource.m */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		773C3DF816E142B000F1A042 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				773C3DF916E142E400F1A042 /* PostsControllerViewController.h */,
+				773C3DFA16E142E400F1A042 /* PostsControllerViewController.m */,
+				773C3DFB16E142E400F1A042 /* PostsControllerViewController.xib */,
+			);
+			name = Posts;
+			sourceTree = "<group>";
+		};
+		773C3DFE16E14A5100F1A042 /* Automovel */ = {
+			isa = PBXGroup;
+			children = (
+				773C3DBB16E13BD300F1A042 /* MasterViewController.h */,
+				773C3DBC16E13BD300F1A042 /* MasterViewController.m */,
+				773C3DBE16E13BD300F1A042 /* DetailViewController.h */,
+				773C3DBF16E13BD300F1A042 /* DetailViewController.m */,
+				773C3DC116E13BD300F1A042 /* MasterViewController.xib */,
+				773C3DC416E13BD300F1A042 /* DetailViewController.xib */,
+			);
+			name = Automovel;
+			sourceTree = "<group>";
+		};
+		773C3DFF16E14A6B00F1A042 /* Persistencia */ = {
+			isa = PBXGroup;
+			children = (
+				773C3E1C16E1666E00F1A042 /* ModeloDeAutomovel.h */,
+				773C3E1D16E1666E00F1A042 /* ModeloDeAutomovel.m */,
+				773C3E1E16E1666E00F1A042 /* Marca.h */,
+				773C3E1F16E1666E00F1A042 /* Marca.m */,
+				773C3DB816E13BD300F1A042 /* Carangos.xcdatamodeld */,
+				773C3E0B16E1660000F1A042 /* Automovel.h */,
+				773C3E0C16E1660000F1A042 /* Automovel.m */,
+			);
+			name = Persistencia;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		773C3D9916E13BD300F1A042 /* Carangos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 773C3DDF16E13BD300F1A042 /* Build configuration list for PBXNativeTarget "Carangos" */;
+			buildPhases = (
+				773C3D9616E13BD300F1A042 /* Sources */,
+				773C3D9716E13BD300F1A042 /* Frameworks */,
+				773C3D9816E13BD300F1A042 /* Resources */,
+				070D9EB8880C475F9092596D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Carangos;
+			productName = Carangos;
+			productReference = 773C3D9A16E13BD300F1A042 /* Carangos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		773C3DCB16E13BD300F1A042 /* CarangosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 773C3DE216E13BD300F1A042 /* Build configuration list for PBXNativeTarget "CarangosTests" */;
+			buildPhases = (
+				773C3DC716E13BD300F1A042 /* Sources */,
+				773C3DC816E13BD300F1A042 /* Frameworks */,
+				773C3DC916E13BD300F1A042 /* Resources */,
+				773C3DCA16E13BD300F1A042 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				773C3DD316E13BD300F1A042 /* PBXTargetDependency */,
+			);
+			name = CarangosTests;
+			productName = CarangosTests;
+			productReference = 773C3DCC16E13BD300F1A042 /* CarangosTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		773C3D9116E13BD300F1A042 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Starfuckers Inc";
+			};
+			buildConfigurationList = 773C3D9416E13BD300F1A042 /* Build configuration list for PBXProject "Carangos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 773C3D8F16E13BD300F1A042;
+			productRefGroup = 773C3D9B16E13BD300F1A042 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				773C3D9916E13BD300F1A042 /* Carangos */,
+				773C3DCB16E13BD300F1A042 /* CarangosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		773C3D9816E13BD300F1A042 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				773C3DAB16E13BD300F1A042 /* InfoPlist.strings in Resources */,
+				773C3DB316E13BD300F1A042 /* Default.png in Resources */,
+				773C3DB516E13BD300F1A042 /* Default@2x.png in Resources */,
+				773C3DB716E13BD300F1A042 /* Default-568h@2x.png in Resources */,
+				773C3DC316E13BD300F1A042 /* MasterViewController.xib in Resources */,
+				773C3DC616E13BD300F1A042 /* DetailViewController.xib in Resources */,
+				773C3DFD16E142E400F1A042 /* PostsControllerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		773C3DC916E13BD300F1A042 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				773C3DD916E13BD300F1A042 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		070D9EB8880C475F9092596D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		773C3DCA16E13BD300F1A042 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		773C3D9616E13BD300F1A042 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				773C3DAD16E13BD300F1A042 /* main.m in Sources */,
+				773C3DB116E13BD300F1A042 /* AppDelegate.m in Sources */,
+				773C3DBA16E13BD300F1A042 /* Carangos.xcdatamodeld in Sources */,
+				773C3DBD16E13BD300F1A042 /* MasterViewController.m in Sources */,
+				773C3DC016E13BD300F1A042 /* DetailViewController.m in Sources */,
+				773C3DFC16E142E400F1A042 /* PostsControllerViewController.m in Sources */,
+				773C3E0D16E1660000F1A042 /* Automovel.m in Sources */,
+				773C3E2016E1666F00F1A042 /* ModeloDeAutomovel.m in Sources */,
+				773C3E2116E1666F00F1A042 /* Marca.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		773C3DC716E13BD300F1A042 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				773C3DDC16E13BD300F1A042 /* CarangosTests.m in Sources */,
+				773C3DF516E1428100F1A042 /* DataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		773C3DD316E13BD300F1A042 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 773C3D9916E13BD300F1A042 /* Carangos */;
+			targetProxy = 773C3DD216E13BD300F1A042 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		773C3DA916E13BD300F1A042 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				773C3DAA16E13BD300F1A042 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		773C3DC116E13BD300F1A042 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				773C3DC216E13BD300F1A042 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		773C3DC416E13BD300F1A042 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				773C3DC516E13BD300F1A042 /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		773C3DD716E13BD300F1A042 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				773C3DD816E13BD300F1A042 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		773C3DDD16E13BD300F1A042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		773C3DDE16E13BD300F1A042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		773C3DE016E13BD300F1A042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DBB393D6B5443228D3F7A1A /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Carangos/Carangos-Prefix.pch";
+				INFOPLIST_FILE = "Carangos/Carangos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		773C3DE116E13BD300F1A042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DBB393D6B5443228D3F7A1A /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Carangos/Carangos-Prefix.pch";
+				INFOPLIST_FILE = "Carangos/Carangos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		773C3DE316E13BD300F1A042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Carangos.app/Carangos";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Carangos/Carangos-Prefix.pch";
+				INFOPLIST_FILE = "CarangosTests/CarangosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		773C3DE416E13BD300F1A042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Carangos.app/Carangos";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Carangos/Carangos-Prefix.pch";
+				INFOPLIST_FILE = "CarangosTests/CarangosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		773C3D9416E13BD300F1A042 /* Build configuration list for PBXProject "Carangos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773C3DDD16E13BD300F1A042 /* Debug */,
+				773C3DDE16E13BD300F1A042 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		773C3DDF16E13BD300F1A042 /* Build configuration list for PBXNativeTarget "Carangos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773C3DE016E13BD300F1A042 /* Debug */,
+				773C3DE116E13BD300F1A042 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		773C3DE216E13BD300F1A042 /* Build configuration list for PBXNativeTarget "CarangosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773C3DE316E13BD300F1A042 /* Debug */,
+				773C3DE416E13BD300F1A042 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		773C3DB816E13BD300F1A042 /* Carangos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				773C3DB916E13BD300F1A042 /* Carangos.xcdatamodel */,
+			);
+			currentVersion = 773C3DB916E13BD300F1A042 /* Carangos.xcdatamodel */;
+			path = Carangos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 773C3D9116E13BD300F1A042 /* Project object */;
+}

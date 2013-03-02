@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CF0CAE2DB044E9AB768A9E7 /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D39C39F50B44D6984F95B9 /* FPPopoverController.m */; };
+		3A04377C766E4D6DB115094A /* JASidePanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = A84007CCB5FB43EDB04E14DD /* JASidePanelController.h */; };
+		6A64509CBCBD4C3D85A3017E /* FPPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5CEDE6ED914A0796BDB1E1 /* FPPopoverController.h */; };
+		800908DCE1514B8B80EFD354 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9E6DC6B6646AB9931ADBD /* JASidePanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		A67A0451FDDF4F8DA0DEA505 /* UIViewController+JASidePanel.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A5410713D945A88196623D /* UIViewController+JASidePanel.h */; };
+		A7A836EDF28944178EEDA4AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4D2C3DD35140258DC4788D /* Foundation.framework */; };
+		AF7009E4ED7B41D6AB802414 /* FPPopoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C9C75923B346B78B6B070B /* FPPopoverView.h */; };
+		B978410E555A469EAD95D08B /* PodsDummy_Pods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E957E1CA42346F2AC8C0D87 /* PodsDummy_Pods.m */; };
+		EFE1B2FC9EE0426AA32670A4 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A558F5C4234E68B5D26565 /* UIViewController+JASidePanel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		F15ED44C95D643CF94D7C873 /* FPTouchView.h in Headers */ = {isa = PBXBuildFile; fileRef = F901BBAE67584FB0884F150A /* FPTouchView.h */; };
+		FB624596299A4384A83A0174 /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B25EB5D3D67248C0A5973313 /* FPPopoverView.m */; };
+		FF375437784941C5A9A95EC9 /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3942B3269F164B749BA310EB /* FPTouchView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15A5410713D945A88196623D /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JASidePanel.h"; path = "JASidePanels/JASidePanels/Source/UIViewController+JASidePanel.h"; sourceTree = SOURCE_ROOT; };
+		1F5CEDE6ED914A0796BDB1E1 /* FPPopoverController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPPopoverController.h; path = FPPopover/FPPopoverController.h; sourceTree = SOURCE_ROOT; };
+		3942B3269F164B749BA310EB /* FPTouchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPTouchView.m; path = FPPopover/FPTouchView.m; sourceTree = SOURCE_ROOT; };
+		3BE9E6DC6B6646AB9931ADBD /* JASidePanelController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JASidePanelController.m; path = JASidePanels/JASidePanels/Source/JASidePanelController.m; sourceTree = SOURCE_ROOT; };
+		5E957E1CA42346F2AC8C0D87 /* PodsDummy_Pods.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PodsDummy_Pods.m; sourceTree = SOURCE_ROOT; };
+		6929CD5EB76F4B5989F2B3F1 /* Pods-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-prefix.pch"; sourceTree = SOURCE_ROOT; };
+		76D39C39F50B44D6984F95B9 /* FPPopoverController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPPopoverController.m; path = FPPopover/FPPopoverController.m; sourceTree = SOURCE_ROOT; };
+		A84007CCB5FB43EDB04E14DD /* JASidePanelController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JASidePanelController.h; path = JASidePanels/JASidePanels/Source/JASidePanelController.h; sourceTree = SOURCE_ROOT; };
+		B25EB5D3D67248C0A5973313 /* FPPopoverView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPPopoverView.m; path = FPPopover/FPPopoverView.m; sourceTree = SOURCE_ROOT; };
+		B9C9C75923B346B78B6B070B /* FPPopoverView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPPopoverView.h; path = FPPopover/FPPopoverView.h; sourceTree = SOURCE_ROOT; };
+		C327F5E411E24395A7C9FFDC /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = SOURCE_ROOT; };
+		DDBCC892F0384864B7CB1045 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F46B8ED7C40D477195BF7CF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A558F5C4234E68B5D26565 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JASidePanel.m"; path = "JASidePanels/JASidePanels/Source/UIViewController+JASidePanel.m"; sourceTree = SOURCE_ROOT; };
+		F901BBAE67584FB0884F150A /* FPTouchView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPTouchView.h; path = FPPopover/FPTouchView.h; sourceTree = SOURCE_ROOT; };
+		FF4D2C3DD35140258DC4788D /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F35B3D27B66741F09A8A60A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7A836EDF28944178EEDA4AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A62AA0508D1478EA179A281 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C763903169E94F6687777CB9 /* FPPopover */,
+				DD13D8FA73684ED2B58074F9 /* JASidePanels */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE8202C758554114A8047471 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D2C3DD35140258DC4788D /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C763903169E94F6687777CB9 /* FPPopover */ = {
+			isa = PBXGroup;
+			children = (
+				1F5CEDE6ED914A0796BDB1E1 /* FPPopoverController.h */,
+				B9C9C75923B346B78B6B070B /* FPPopoverView.h */,
+				F901BBAE67584FB0884F150A /* FPTouchView.h */,
+				76D39C39F50B44D6984F95B9 /* FPPopoverController.m */,
+				B25EB5D3D67248C0A5973313 /* FPPopoverView.m */,
+				3942B3269F164B749BA310EB /* FPTouchView.m */,
+			);
+			name = FPPopover;
+			sourceTree = "<group>";
+		};
+		C95987E9CA0141B8A663778A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD007417F0B845CC835F38B5 /* Pods */,
+				5E957E1CA42346F2AC8C0D87 /* PodsDummy_Pods.m */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DD007417F0B845CC835F38B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C327F5E411E24395A7C9FFDC /* Pods-resources.sh */,
+				6929CD5EB76F4B5989F2B3F1 /* Pods-prefix.pch */,
+				DDBCC892F0384864B7CB1045 /* Pods.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD13D8FA73684ED2B58074F9 /* JASidePanels */ = {
+			isa = PBXGroup;
+			children = (
+				A84007CCB5FB43EDB04E14DD /* JASidePanelController.h */,
+				3BE9E6DC6B6646AB9931ADBD /* JASidePanelController.m */,
+				15A5410713D945A88196623D /* UIViewController+JASidePanel.h */,
+				F6A558F5C4234E68B5D26565 /* UIViewController+JASidePanel.m */,
+			);
+			name = JASidePanels;
+			sourceTree = "<group>";
+		};
+		DF6565216B704D299A391D74 = {
+			isa = PBXGroup;
+			children = (
+				F0FCFBC038DC4A4BBD4846DC /* Products */,
+				BE8202C758554114A8047471 /* Frameworks */,
+				4A62AA0508D1478EA179A281 /* Pods */,
+				C95987E9CA0141B8A663778A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		F0FCFBC038DC4A4BBD4846DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F46B8ED7C40D477195BF7CF2 /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		91F66A4468874515A90A6F56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A64509CBCBD4C3D85A3017E /* FPPopoverController.h in Headers */,
+				AF7009E4ED7B41D6AB802414 /* FPPopoverView.h in Headers */,
+				F15ED44C95D643CF94D7C873 /* FPTouchView.h in Headers */,
+				3A04377C766E4D6DB115094A /* JASidePanelController.h in Headers */,
+				A67A0451FDDF4F8DA0DEA505 /* UIViewController+JASidePanel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FE53B3311B51401A895B07ED /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2CE930360344BBC9F1B7118 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				E7318354BA9F413FBE7D63C3 /* Sources */,
+				F35B3D27B66741F09A8A60A8 /* Frameworks */,
+				91F66A4468874515A90A6F56 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = F46B8ED7C40D477195BF7CF2 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D747DC199114150B7ED5925 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 3ECE32A6CAA3495D9433301E /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF6565216B704D299A391D74;
+			productRefGroup = F0FCFBC038DC4A4BBD4846DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE53B3311B51401A895B07ED /* Pods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7318354BA9F413FBE7D63C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CF0CAE2DB044E9AB768A9E7 /* FPPopoverController.m in Sources */,
+				FB624596299A4384A83A0174 /* FPPopoverView.m in Sources */,
+				FF375437784941C5A9A95EC9 /* FPTouchView.m in Sources */,
+				800908DCE1514B8B80EFD354 /* JASidePanelController.m in Sources */,
+				EFE1B2FC9EE0426AA32670A4 /* UIViewController+JASidePanel.m in Sources */,
+				B978410E555A469EAD95D08B /* PodsDummy_Pods.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		32A397C12C9A4AF59C60B2FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDBCC892F0384864B7CB1045 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				PODS_HEADERS_SEARCH_PATHS = "${PODS_BUILD_HEADERS_SEARCH_PATHS}";
+				PODS_ROOT = "${SRCROOT}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4B6B8584B84040F9B47D1D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDBCC892F0384864B7CB1045 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CPLUSPLUSFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "";
+				PODS_HEADERS_SEARCH_PATHS = "${PODS_BUILD_HEADERS_SEARCH_PATHS}";
+				PODS_ROOT = "${SRCROOT}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0DD0E4A2F1A46FA855841B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		C62FAE283F1F4084B3951363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3ECE32A6CAA3495D9433301E /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DD0E4A2F1A46FA855841B4 /* Release */,
+				C62FAE283F1F4084B3951363 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2CE930360344BBC9F1B7118 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B6B8584B84040F9B47D1D1F /* Release */,
+				32A397C12C9A4AF59C60B2FF /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D747DC199114150B7ED5925 /* Project object */;
+}

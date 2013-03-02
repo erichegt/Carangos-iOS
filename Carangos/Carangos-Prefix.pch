@@ -1,0 +1,99 @@
+//
+// Prefix header for all source files of the 'Carangos' target in the 'Carangos' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import "AppDelegate.h"
+#endif
+
+@interface UIViewController (WithContextAcess)
+
+-(NSManagedObjectContext*) context;
+
+-(void) saveManagedContext;
+
+@end
+
+@implementation UIViewController (WithContextAcess)
+
+-(NSManagedObjectContext*) context {
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    return [delegate managedObjectContext];
+}
+
+-(void) saveManagedContext {
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    [delegate saveContext];
+}
+
+@end
+
+
+@interface NSManagedObject (withUtilityMethods)
+
++(NSString*) managedObjectClassName;
+
++(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context;
+
++(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context;
+
+@end
+
+
+@implementation NSManagedObject (withUtilityMethods)
+
++(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context {
+    return [NSEntityDescription insertNewObjectForEntityForName: [NSManagedObject managedObjectClassName]
+                                         inManagedObjectContext: context];
+}
+
++(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity =
+            [NSEntityDescription entityForName: [NSManagedObject managedObjectClassName]
+                        inManagedObjectContext:context];
+    
+    [fetchRequest setEntity:entity];
+    
+    return fetchRequest;
+}
+
+@end
+
+
+@interface NSArray (WithFunctionalMethods)
+
+-(NSArray *)map:(id (^)(id obj))block;
+-(NSArray *)filter:(BOOL (^)(id obj))block;
+
+@end
+
+@implementation NSArray (WithFunctionalMethods)
+
+-(NSArray *)map:(id (^)(id obj))block;
+{
+    NSMutableArray *newArray = [NSMutableArray arrayWithCapacity:self.count];
+    for ( id obj in self ) [newArray addObject:block(obj)];
+    return newArray;
+}
+
+-(NSArray *)filter:(BOOL (^)(id obj))block {
+    NSMutableArray *newArray = [[NSMutableArray alloc] init];
+    for ( id obj in self ) {
+        if (block(obj)) [newArray addObject:obj];
+    }
+    return newArray;
+}
+
+@end

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Automovel" representedClassName="Automovel" syncable="YES">
+        <attribute name="ano" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="modelo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ModeloDeAutomovel" syncable="YES"/>
+    </entity>
+    <entity name="Marca" representedClassName="Marca" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ModeloDeAutomovel" representedClassName="ModeloDeAutomovel" syncable="YES">
+        <attribute name="cilindrada" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="combustivel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="litrosMotor" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fabricante" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Marca" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Automovel" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Marca" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="ModeloDeAutomovel" positionX="160" positionY="192" width="128" height="120"/>
+    </elements>
+</model>

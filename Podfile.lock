@@ -1,0 +1,14 @@
+
+PODS:
+- FPPopover (1.1)
+- JASidePanels (1.2.1)
+
+DEPENDENCIES:
+- FPPopover (~> 1.1)
+- JASidePanels (~> 1.2.1)
+
+SPEC CHECKSUMS:
+  FPPopover: 80927060f59836f3b373716b8898535979c7f971
+  JASidePanels: e37a175f06d5e228733daf276b31e2b2f6fade5f
+
+COCOAPODS: 0.16.3
