@@ -14,4 +14,6 @@
 
 @property (nonatomic, retain) NSString * nome;
 
++(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome;
+
 @end

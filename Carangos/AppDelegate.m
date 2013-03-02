@@ -10,6 +10,10 @@
 
 #import "MasterViewController.h"
 
+#import "Marca.h"
+#import "ModeloDeAutomovel.h"
+#import "Automovel.h"
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;

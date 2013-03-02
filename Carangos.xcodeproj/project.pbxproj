@@ -35,6 +35,9 @@
 		773C3E0D16E1660000F1A042 /* Automovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E0C16E1660000F1A042 /* Automovel.m */; };
 		773C3E2016E1666F00F1A042 /* ModeloDeAutomovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E1D16E1666E00F1A042 /* ModeloDeAutomovel.m */; };
 		773C3E2116E1666F00F1A042 /* Marca.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E1F16E1666E00F1A042 /* Marca.m */; };
+		773C3E2416E1946000F1A042 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E2316E1946000F1A042 /* Repository.m */; };
+		773C3E2916E19B5500F1A042 /* AutomovelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E2816E19B5500F1A042 /* AutomovelRepository.m */; };
+		773C3E2C16E19D9000F1A042 /* MarcaRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E2B16E19D9000F1A042 /* MarcaRepository.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,12 @@
 		773C3E1D16E1666E00F1A042 /* ModeloDeAutomovel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeloDeAutomovel.m; sourceTree = "<group>"; };
 		773C3E1E16E1666E00F1A042 /* Marca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marca.h; sourceTree = "<group>"; };
 		773C3E1F16E1666E00F1A042 /* Marca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marca.m; sourceTree = "<group>"; };
+		773C3E2216E1946000F1A042 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
+		773C3E2316E1946000F1A042 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
+		773C3E2716E19B5400F1A042 /* AutomovelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomovelRepository.h; sourceTree = "<group>"; };
+		773C3E2816E19B5500F1A042 /* AutomovelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomovelRepository.m; sourceTree = "<group>"; };
+		773C3E2A16E19D9000F1A042 /* MarcaRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcaRepository.h; sourceTree = "<group>"; };
+		773C3E2B16E19D9000F1A042 /* MarcaRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarcaRepository.m; sourceTree = "<group>"; };
 		BAD30E15B1844F1FBF7CFA72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -240,15 +249,37 @@
 		773C3DFF16E14A6B00F1A042 /* Persistencia */ = {
 			isa = PBXGroup;
 			children = (
+				773C3E2616E19A3000F1A042 /* Repositories */,
+				773C3E2516E199E900F1A042 /* Entidades */,
+				773C3DB816E13BD300F1A042 /* Carangos.xcdatamodeld */,
+			);
+			name = Persistencia;
+			sourceTree = "<group>";
+		};
+		773C3E2516E199E900F1A042 /* Entidades */ = {
+			isa = PBXGroup;
+			children = (
+				773C3E0B16E1660000F1A042 /* Automovel.h */,
+				773C3E0C16E1660000F1A042 /* Automovel.m */,
 				773C3E1C16E1666E00F1A042 /* ModeloDeAutomovel.h */,
 				773C3E1D16E1666E00F1A042 /* ModeloDeAutomovel.m */,
 				773C3E1E16E1666E00F1A042 /* Marca.h */,
 				773C3E1F16E1666E00F1A042 /* Marca.m */,
-				773C3DB816E13BD300F1A042 /* Carangos.xcdatamodeld */,
-				773C3E0B16E1660000F1A042 /* Automovel.h */,
-				773C3E0C16E1660000F1A042 /* Automovel.m */,
 			);
-			name = Persistencia;
+			name = Entidades;
+			sourceTree = "<group>";
+		};
+		773C3E2616E19A3000F1A042 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				773C3E2216E1946000F1A042 /* Repository.h */,
+				773C3E2316E1946000F1A042 /* Repository.m */,
+				773C3E2716E19B5400F1A042 /* AutomovelRepository.h */,
+				773C3E2816E19B5500F1A042 /* AutomovelRepository.m */,
+				773C3E2A16E19D9000F1A042 /* MarcaRepository.h */,
+				773C3E2B16E19D9000F1A042 /* MarcaRepository.m */,
+			);
+			name = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +418,9 @@
 				773C3E0D16E1660000F1A042 /* Automovel.m in Sources */,
 				773C3E2016E1666F00F1A042 /* ModeloDeAutomovel.m in Sources */,
 				773C3E2116E1666F00F1A042 /* Marca.m in Sources */,
+				773C3E2416E1946000F1A042 /* Repository.m in Sources */,
+				773C3E2916E19B5500F1A042 /* AutomovelRepository.m in Sources */,
+				773C3E2C16E19D9000F1A042 /* MarcaRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

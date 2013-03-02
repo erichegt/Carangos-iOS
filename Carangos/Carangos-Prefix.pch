@@ -40,29 +40,31 @@
 @end
 
 
-@interface NSManagedObject (withUtilityMethods)
+@interface NSManagedObject (withMarotagens)
 
-+(NSString*) managedObjectClassName;
++(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context
+                                andClassName: (NSString*) className;
 
-+(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context;
-
-+(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context;
++(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context
+                  andClassName: (NSString*) className;
 
 @end
 
+@implementation NSManagedObject (withMarotagens)
 
-@implementation NSManagedObject (withUtilityMethods)
-
-+(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context {
-    return [NSEntityDescription insertNewObjectForEntityForName: [NSManagedObject managedObjectClassName]
++(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context
+                                andClassName: (NSString*) className{
+    
+    return [NSEntityDescription insertNewObjectForEntityForName: className
                                          inManagedObjectContext: context];
 }
 
-+(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context{
++(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context
+                  andClassName: (NSString*) className{
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity =
-            [NSEntityDescription entityForName: [NSManagedObject managedObjectClassName]
-                        inManagedObjectContext:context];
+    [NSEntityDescription entityForName: className inManagedObjectContext:context];
     
     [fetchRequest setEntity:entity];
     
@@ -70,6 +72,8 @@
 }
 
 @end
+
+
 
 
 @interface NSArray (WithFunctionalMethods)

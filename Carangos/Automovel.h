@@ -16,4 +16,8 @@
 @property (nonatomic, retain) NSString * cor;
 @property (nonatomic, retain) ModeloDeAutomovel *modelo;
 
++(Automovel*) automovelWithContext: (NSManagedObjectContext*) ctx
+                         andModelo: (ModeloDeAutomovel*) modelo
+                            andCor: (NSString*) cor
+                            andAno: (int) ano;
 @end

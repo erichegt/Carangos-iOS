@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModeloDeAutomovel.h"
 
 @interface DetailViewController : UIViewController
 
+-(id) initWithModelo: (ModeloDeAutomovel*) _modelo;
 
 @end

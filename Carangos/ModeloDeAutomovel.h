@@ -9,24 +9,33 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-typedef enum {
-    V4 = 0,
-    V6 = 1,
-    V8 = 2,
-    V10 = 3,
-    V12 = 4,
-    V18 = 5
-} Cindros;
 
 typedef enum {
-    _10L = 0,
-    _13L = 1,
-    _16L = 2,
-    _18L = 3,
-    _20L = 4,
-    _24L = 5,
-    _30L = 6
+    CilindrosV4 = 0,
+    CilindrosV6 = 1,
+    CilindrosV8 = 2,
+    CilindrosV10 = 3,
+    CilindrosV12 = 4,
+    CilindrosV18 = 5
+} Cilindros;
+
+typedef enum {
+    Litros_10L = 0,
+    Litros_13L = 1,
+    Litros_16L = 2,
+    Litros_18L = 3,
+    Litros_20L = 4,
+    Litros_24L = 5,
+    Litros_30L = 6
 } Litros;
+
+typedef enum {
+    CombustivelGasolina = 0,
+    CombustivelAlcool = 1,
+    CombustivelFlex = 2,
+    CombustivelDiesel = 3
+
+} Combustivel;
 
 
 @class Marca;
@@ -40,5 +49,13 @@ typedef enum {
 @property (nonatomic, retain) Marca *fabricante;
 
 
+
++(ModeloDeAutomovel*) modeloWithContext: (NSManagedObjectContext*) ctx
+                                andNome: (NSString*) nome
+                          andFabricante: (Marca*) marca
+                      andMotorComLitros: (Litros) litros
+                         andCombustivel: (Combustivel) combustivel;
+
++(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx;
 
 @end

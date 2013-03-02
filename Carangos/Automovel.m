@@ -11,12 +11,25 @@
 
 @implementation Automovel
 
-@dynamic ano;
-@dynamic cor;
-@dynamic modelo;
+@dynamic ano, cor, modelo;
 
-+(NSString*) managedObjectClassName {
-    return @"Automovel";
+
++(Automovel*) automovelWithContext: (NSManagedObjectContext*) ctx
+                         andModelo: (ModeloDeAutomovel*) modelo
+                            andCor: (NSString*) cor
+                            andAno: (int) ano {
+    
+    Automovel *automovel = (Automovel*) [Automovel managedObjectWithContext:ctx andClassName:@"Automovel"];
+    
+    [automovel setModelo:modelo];
+    [automovel setCor:cor];
+    [automovel setAno:[NSNumber numberWithInt:ano]];
+    
+    return automovel;
+}
+
+-(NSString*) description {
+    return [[self modelo] description];
 }
 
 @end

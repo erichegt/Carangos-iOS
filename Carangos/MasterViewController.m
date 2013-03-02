@@ -7,18 +7,21 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+#import "ModeloDeAutomovel.h"
 
 @interface MasterViewController ()
+
+@property (nonatomic, strong) NSArray* modelos;
+
 
 @end
 
 @implementation MasterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:@"MasterViewController" bundle:[NSBundle mainBundle]];
     if (self) {
         self.title = @"Carros";
     }
@@ -28,10 +31,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    [self setModelos: [ModeloDeAutomovel todosWithContext:[self context]] ];
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToDetail)];
     
     self.navigationItem.rightBarButtonItem = addButton;
 }
@@ -40,6 +45,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) goToDetail {
+    DetailViewController *controller = [[DetailViewController alloc] init];
+    
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
@@ -52,7 +63,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [[self modelos] count];
 }
 
 // Customize the appearance of table view cells.
@@ -66,6 +77,9 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
+    ModeloDeAutomovel *modelo = [[self modelos] objectAtIndex:[indexPath row]];
+    
+    [cell setText:[modelo description]];
 
     return cell;
 }
@@ -87,13 +101,14 @@
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // The table view should not be re-orderable.
     return NO;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailViewController *controller = [[DetailViewController alloc] init];
+    ModeloDeAutomovel *modelo = [[self modelos] objectAtIndex:[indexPath row]];
+    
+    DetailViewController *controller = [[DetailViewController alloc] initWithModelo:modelo];
     
     [self.navigationController pushViewController:controller animated:YES];
 }

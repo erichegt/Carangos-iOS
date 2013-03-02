@@ -13,8 +13,13 @@
 
 @dynamic nome;
 
-+(NSString*) managedObjectClassName {
-    return @"Marca";
++(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome{
+    Marca *marca = (Marca*) [Marca managedObjectWithContext:ctx andClassName:@"Marca"];
+    [marca setNome:nome];
+    
+    return marca;
 }
+
+
 
 @end
