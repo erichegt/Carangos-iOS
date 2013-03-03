@@ -13,4 +13,6 @@
 
 -(id) initWithModelo: (ModeloDeAutomovel*) _modelo;
 
+- (IBAction)escolherFabricante:(id)sender;
+
 @end

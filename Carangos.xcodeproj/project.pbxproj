@@ -38,6 +38,8 @@
 		773C3E2416E1946000F1A042 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E2316E1946000F1A042 /* Repository.m */; };
 		773C3E2916E19B5500F1A042 /* AutomovelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E2816E19B5500F1A042 /* AutomovelRepository.m */; };
 		773C3E2C16E19D9000F1A042 /* MarcaRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E2B16E19D9000F1A042 /* MarcaRepository.m */; };
+		773C3E3416E2D58400F1A042 /* OpcoesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E3216E2D58400F1A042 /* OpcoesController.m */; };
+		773C3E3516E2D58400F1A042 /* OpcoesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3E3316E2D58400F1A042 /* OpcoesController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,9 @@
 		773C3E2816E19B5500F1A042 /* AutomovelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomovelRepository.m; sourceTree = "<group>"; };
 		773C3E2A16E19D9000F1A042 /* MarcaRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcaRepository.h; sourceTree = "<group>"; };
 		773C3E2B16E19D9000F1A042 /* MarcaRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarcaRepository.m; sourceTree = "<group>"; };
+		773C3E3116E2D58300F1A042 /* OpcoesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpcoesController.h; sourceTree = "<group>"; };
+		773C3E3216E2D58400F1A042 /* OpcoesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpcoesController.m; sourceTree = "<group>"; };
+		773C3E3316E2D58400F1A042 /* OpcoesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpcoesController.xib; sourceTree = "<group>"; };
 		BAD30E15B1844F1FBF7CFA72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,6 +247,9 @@
 				773C3DBF16E13BD300F1A042 /* DetailViewController.m */,
 				773C3DC116E13BD300F1A042 /* MasterViewController.xib */,
 				773C3DC416E13BD300F1A042 /* DetailViewController.xib */,
+				773C3E3116E2D58300F1A042 /* OpcoesController.h */,
+				773C3E3216E2D58400F1A042 /* OpcoesController.m */,
+				773C3E3316E2D58400F1A042 /* OpcoesController.xib */,
 			);
 			name = Automovel;
 			sourceTree = "<group>";
@@ -361,6 +369,7 @@
 				773C3DC316E13BD300F1A042 /* MasterViewController.xib in Resources */,
 				773C3DC616E13BD300F1A042 /* DetailViewController.xib in Resources */,
 				773C3DFD16E142E400F1A042 /* PostsControllerViewController.xib in Resources */,
+				773C3E3516E2D58400F1A042 /* OpcoesController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +430,7 @@
 				773C3E2416E1946000F1A042 /* Repository.m in Sources */,
 				773C3E2916E19B5500F1A042 /* AutomovelRepository.m in Sources */,
 				773C3E2C16E19D9000F1A042 /* MarcaRepository.m in Sources */,
+				773C3E3416E2D58400F1A042 /* OpcoesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

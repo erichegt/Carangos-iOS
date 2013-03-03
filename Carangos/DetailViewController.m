@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "FPPopoverController.h"
+#import "OpcoesController.h"
 
 @interface DetailViewController ()
 
@@ -36,6 +38,16 @@
     }
     
     return self;
+}
+
+- (IBAction)escolherFabricante:(id)sender {
+    OpcoesController *controller = [[OpcoesController alloc] init];
+    
+    FPPopoverController *popover = [[FPPopoverController alloc] initWithViewController:controller];
+    
+    //the popover will be presented from the okButton view
+    [popover presentPopoverFromView:sender];
+    
 }
 
 
