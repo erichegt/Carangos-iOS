@@ -16,4 +16,6 @@
 
 +(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome;
 
++(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx;
+
 @end

@@ -20,6 +20,17 @@
     return marca;
 }
 
+-(NSString*) description {
+    return [self nome];
+}
+
+
++(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx {
+    NSFetchRequest *fetch = [Marca createFetch:ctx andClassName:@"Marca"];
+    
+    return [ctx executeFetchRequest:fetch error:nil];
+}
+
 
 
 @end

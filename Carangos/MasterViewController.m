@@ -31,7 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modeloSalvo) name:@"NovoModeloDeCarro" object:nil];
+    
     [self setModelos: [ModeloDeAutomovel todosWithContext:[self context]] ];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -39,6 +41,10 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(goToDetail)];
     
     self.navigationItem.rightBarButtonItem = addButton;
+}
+
+-(void) modeloSalvo {
+    [[self tableView] reloadData];
 }
 
 - (void)didReceiveMemoryWarning

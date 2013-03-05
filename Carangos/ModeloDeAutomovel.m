@@ -13,6 +13,35 @@
 
 @dynamic cilindrada, combustivel, litrosMotor, nome, fabricante;
 
++(NSArray*) cilindradasDeMotores{
+    return [NSArray arrayWithObjects:@"V4", @"V6", @"V8", @"V12", @"V18", nil];
+}
+
++(NSArray*) litrosMotorizacoes{
+    return [NSArray arrayWithObjects:@"1.0L", @"1.3L", @"1.6L", @"1.8L", @"2.0L", @"2.4L", @"3.0L", nil];
+}
+
++(NSArray*) tiposDeCombustivel{
+    return [NSArray arrayWithObjects:@"Gasolina", @"Álcool", @"Diesel", @"Flex", nil];
+}
+
+-(void) updateAtributesWithNome:(NSString*) nome
+                  andFabricante: (Marca*) marca
+              andMotorComLitros: (Litros) litros
+                 andCombustivel: (Combustivel) combustivel {
+    
+    [self setNome:nome];
+    [self setFabricante:marca];
+    [self setCombustivel:[NSNumber numberWithInt:combustivel]];
+    [self setLitrosMotor:[NSNumber numberWithInt:litros]];
+    
+}
+
++(ModeloDeAutomovel*) modeloWithContext: (NSManagedObjectContext*) ctx {
+    return (ModeloDeAutomovel*) [ModeloDeAutomovel managedObjectWithContext:ctx
+                                                               andClassName:@"ModeloDeAutomovel"];
+}
+
 +(ModeloDeAutomovel*) modeloWithContext: (NSManagedObjectContext*) ctx
                                 andNome: (NSString*) nome
                           andFabricante: (Marca*) marca
@@ -22,10 +51,7 @@
     ModeloDeAutomovel *modelo = (ModeloDeAutomovel*) [ModeloDeAutomovel managedObjectWithContext:ctx
                                                                     andClassName:@"ModeloDeAutomovel"];
     
-    [modelo setNome:nome];
-    [modelo setFabricante:marca];
-    [modelo setCombustivel:[NSNumber numberWithInt:combustivel]];
-    [modelo setLitrosMotor:[NSNumber numberWithInt:litros]];
+    [modelo updateAtributesWithNome:nome andFabricante:marca andMotorComLitros:litros andCombustivel:combustivel];
     
     return modelo;
 }

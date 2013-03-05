@@ -11,8 +11,16 @@
 
 @interface DetailViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *nome;
+
 -(id) initWithModelo: (ModeloDeAutomovel*) _modelo;
 
 - (IBAction)escolherFabricante:(id)sender;
+- (IBAction)escolherCilindros:(id)sender;
+- (IBAction)escolherLitrosMotor:(id)sender;
+
+
+- (IBAction)toqueNoFundoDaTela:(id)sender;
+
 
 @end

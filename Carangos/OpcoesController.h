@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OpcoesController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface OpcoesController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
+
+- (id)initWithValores: (NSArray*) opcoes andCallback:(void (^)(NSInteger selecionado))block;
+
+@property (strong, nonatomic) IBOutlet UIPickerView *picker;
 
 @end

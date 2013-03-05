@@ -48,7 +48,18 @@ typedef enum {
 @property (nonatomic, retain) NSString * nome;
 @property (nonatomic, retain) Marca *fabricante;
 
++(NSArray*) litrosMotorizacoes;
 
++(NSArray*) tiposDeCombustivel;
+
++(NSArray*) cilindradasDeMotores;
+
+-(void) updateAtributesWithNome:(NSString*) nome
+                  andFabricante: (Marca*) marca
+              andMotorComLitros: (Litros) litros
+                 andCombustivel: (Combustivel) combustivel;
+
++(ModeloDeAutomovel*) modeloWithContext: (NSManagedObjectContext*) ctx;
 
 +(ModeloDeAutomovel*) modeloWithContext: (NSManagedObjectContext*) ctx
                                 andNome: (NSString*) nome
