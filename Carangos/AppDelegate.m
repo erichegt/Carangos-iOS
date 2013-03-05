@@ -7,12 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
 #import "MasterViewController.h"
+#import "PopulaBanco.h"
 
-#import "Marca.h"
-#import "ModeloDeAutomovel.h"
-#import "Automovel.h"
 
 @implementation AppDelegate
 
@@ -27,30 +24,10 @@
 
     MasterViewController *masterViewController = [[MasterViewController alloc]init];
     
-//    NSManagedObjectContext *ctx = [self managedObjectContext];
-//
-//    [Marca marcaWithContext:ctx andNome:@"VolksWagen"];
-//    [Marca marcaWithContext:ctx andNome:@"General Motors"];
-//    [Marca marcaWithContext:ctx andNome:@"Fiat"];
-//    
-//    Marca *nissan = [Marca marcaWithContext:ctx andNome:@"Nissan"];
-//            
-//    [ModeloDeAutomovel modeloWithContext:ctx andNome:@"March"
-//                                                       andFabricante:nissan
-//                                                   andMotorComLitros:Litros_16L
-//                                                      andCombustivel:CombustivelFlex];
-//    
-//    [ModeloDeAutomovel modeloWithContext:ctx andNome:@"Tiida"
-//                                                       andFabricante:nissan
-//                                                   andMotorComLitros:Litros_16L
-//                                                      andCombustivel:CombustivelFlex];
-//    
-//    [ModeloDeAutomovel modeloWithContext:ctx andNome:@"Sentra"
-//                                                       andFabricante:nissan
-//                                                   andMotorComLitros:Litros_16L
-//                                                      andCombustivel:CombustivelFlex];
-//    
-    [self saveContext];
+    AppDelegate *appDelegate = self;
+    [PopulaBanco executa:[self managedObjectContext] andSaveAction:^(bool ok) {
+        [appDelegate saveContext];
+    }];
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
 
