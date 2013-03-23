@@ -19,16 +19,17 @@
 
 @implementation OpcoesController
 
-@synthesize valores, picker;
+@synthesize valores, table;
 
 - (id)initWithValores: (NSArray*) opcoes andCallback:(void (^)(NSInteger selecionado))block
 {
     self = [super initWithNibName:@"OpcoesController" bundle:[NSBundle mainBundle]];
     if (self) {
-        UIPickerView *pickerMofo = (UIPickerView*)[ [self view] viewWithTag:666];
-        [self setPicker:pickerMofo];
-        [[self picker] setDataSource:self];
-        [[self picker] setDelegate:self];
+        UITableView *tabela = (UITableView*)[ [self view] viewWithTag:666];
+        [self setTable:tabela];
+        
+        [[self table] setDataSource:self];
+        [[self table] setDelegate:self];
         [self setValores:opcoes];
         [self setExecutaComSelecionado:block];
     }
@@ -38,7 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self picker] reloadAllComponents];
+    [[self table] reloadData];
    
 }
 
@@ -56,18 +57,28 @@
     
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"SELECIONADO: %d", row);
-    
-    self.executaComSelecionado(row);
-}
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [valores count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSString *valor = [[[self valores] objectAtIndex:[indexPath row]] description];
+    
+    [cell setText:[valor description]];
+    
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.executaComSelecionado([indexPath row]);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
