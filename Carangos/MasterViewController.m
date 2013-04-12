@@ -13,6 +13,7 @@
 @interface MasterViewController ()
 
 @property (nonatomic, strong) NSArray* modelos;
+@property (nonatomic, strong) NSArray* marcas;
 
 
 @end

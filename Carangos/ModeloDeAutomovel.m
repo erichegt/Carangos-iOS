@@ -10,8 +10,8 @@
 #import "Marca.h"
 
 @implementation ModeloDeAutomovel
-
 @dynamic cilindrada, combustivel, litrosMotor, nome, fabricante;
+
 
 +(NSArray*) cilindradasDeMotores{
     return [NSArray arrayWithObjects:@"V4", @"V6", @"V8", @"V12", @"V18", nil];
@@ -60,6 +60,17 @@
     NSFetchRequest *fetch = [ModeloDeAutomovel createFetch:ctx andClassName:@"ModeloDeAutomovel"];
     
     return [ctx executeFetchRequest:fetch error:nil];
+}
+
++(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx andMarca: (Marca*) marca{
+    NSFetchRequest *fetch = [ModeloDeAutomovel createFetch:ctx andClassName:@"ModeloDeAutomovel"];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"fabricante = %@" argumentArray:[NSArray arrayWithObject:marca]];
+    
+    [fetch setPredicate:predicate];
+    
+    return [ctx executeFetchRequest:fetch error:nil];
+
 }
 
 -(NSString*) description {
