@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BlogPostsViewController : UIViewController
+@interface BlogPostsViewController : UIViewController <UITableViewDataSource> {
+    __weak IBOutlet UITableView *blogPostsTableView;
+    
+    NSArray *blogPosts;
+}
 
 @end

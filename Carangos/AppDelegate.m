@@ -10,6 +10,7 @@
 #import "MasterViewController.h"
 #import "PopulaBanco.h"
 
+#import "BlogPostsViewController.h"
 
 @implementation AppDelegate
 
@@ -22,14 +23,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    MasterViewController *masterViewController = [[MasterViewController alloc]init];
+//    MasterViewController *masterViewController = [[MasterViewController alloc] init];
     
     AppDelegate *appDelegate = self;
     [PopulaBanco executa:[self managedObjectContext] andSaveAction:^(bool ok) {
         [appDelegate saveContext];
     }];
     
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+//    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    BlogPostsViewController *blogPostVC = [[BlogPostsViewController alloc] init];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:blogPostVC];
 
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];

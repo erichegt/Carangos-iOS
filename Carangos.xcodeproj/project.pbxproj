@@ -38,6 +38,8 @@
 		773C3E3416E2D58400F1A042 /* OpcoesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E3216E2D58400F1A042 /* OpcoesController.m */; };
 		773C3E3516E2D58400F1A042 /* OpcoesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3E3316E2D58400F1A042 /* OpcoesController.xib */; };
 		77F063BD16E62C9B008FF9D7 /* PopulaBanco.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F063BC16E62C9B008FF9D7 /* PopulaBanco.m */; };
+		7C5EF13B1718BC040043AB67 /* BlogPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */; };
+		7C5EF13C1718BC040043AB67 /* BlogPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5EF13A1718BC040043AB67 /* BlogPostsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,9 @@
 		773C3E3316E2D58400F1A042 /* OpcoesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpcoesController.xib; sourceTree = "<group>"; };
 		77F063BB16E62C9B008FF9D7 /* PopulaBanco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopulaBanco.h; sourceTree = "<group>"; };
 		77F063BC16E62C9B008FF9D7 /* PopulaBanco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopulaBanco.m; sourceTree = "<group>"; };
+		7C5EF1381718BC040043AB67 /* BlogPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostsViewController.h; sourceTree = "<group>"; };
+		7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostsViewController.m; sourceTree = "<group>"; };
+		7C5EF13A1718BC040043AB67 /* BlogPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogPostsViewController.xib; sourceTree = "<group>"; };
 		BAD30E15B1844F1FBF7CFA72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -228,6 +233,9 @@
 				773C3DF916E142E400F1A042 /* PostsControllerViewController.h */,
 				773C3DFA16E142E400F1A042 /* PostsControllerViewController.m */,
 				773C3DFB16E142E400F1A042 /* PostsControllerViewController.xib */,
+				7C5EF1381718BC040043AB67 /* BlogPostsViewController.h */,
+				7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */,
+				7C5EF13A1718BC040043AB67 /* BlogPostsViewController.xib */,
 			);
 			name = Posts;
 			sourceTree = "<group>";
@@ -237,9 +245,9 @@
 			children = (
 				773C3DBB16E13BD300F1A042 /* MasterViewController.h */,
 				773C3DBC16E13BD300F1A042 /* MasterViewController.m */,
+				773C3DC116E13BD300F1A042 /* MasterViewController.xib */,
 				773C3DBE16E13BD300F1A042 /* DetailViewController.h */,
 				773C3DBF16E13BD300F1A042 /* DetailViewController.m */,
-				773C3DC116E13BD300F1A042 /* MasterViewController.xib */,
 				773C3DC416E13BD300F1A042 /* DetailViewController.xib */,
 				773C3E3116E2D58300F1A042 /* OpcoesController.h */,
 				773C3E3216E2D58400F1A042 /* OpcoesController.m */,
@@ -352,6 +360,7 @@
 				773C3DC616E13BD300F1A042 /* DetailViewController.xib in Resources */,
 				773C3DFD16E142E400F1A042 /* PostsControllerViewController.xib in Resources */,
 				773C3E3516E2D58400F1A042 /* OpcoesController.xib in Resources */,
+				7C5EF13C1718BC040043AB67 /* BlogPostsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +420,7 @@
 				773C3E2116E1666F00F1A042 /* Marca.m in Sources */,
 				773C3E3416E2D58400F1A042 /* OpcoesController.m in Sources */,
 				77F063BD16E62C9B008FF9D7 /* PopulaBanco.m in Sources */,
+				7C5EF13B1718BC040043AB67 /* BlogPostsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
