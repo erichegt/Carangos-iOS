@@ -16,6 +16,8 @@
 
 +(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome;
 
++(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome attached: (BOOL) attached;
+
 +(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx;
 
 @end

@@ -12,6 +12,8 @@
 
 #import "BlogPostsViewController.h"
 
+#import "Marca.h"
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -24,13 +26,13 @@
     // Override point for customization after application launch.
 
 //    MasterViewController *masterViewController = [[MasterViewController alloc] init];
-    
-    AppDelegate *appDelegate = self;
-    [PopulaBanco executa:[self managedObjectContext] andSaveAction:^(bool ok) {
-        [appDelegate saveContext];
-    }];
-    
 //    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    
+//    AppDelegate *appDelegate = self;
+//    [PopulaBanco executa:[self managedObjectContext] andSaveAction:^(bool ok) {
+//        [appDelegate saveContext];
+//    }];
+    
     BlogPostsViewController *blogPostVC = [[BlogPostsViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:blogPostVC];
 

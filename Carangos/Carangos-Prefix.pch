@@ -48,6 +48,9 @@
 +(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context
                   andClassName: (NSString*) className;
 
++(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context
+                                andClassName: (NSString*) className attached: (BOOL) attached;
+
 @end
 
 @implementation NSManagedObject (withMarotagens)
@@ -57,6 +60,17 @@
     
     return [NSEntityDescription insertNewObjectForEntityForName: className
                                          inManagedObjectContext: context];
+}
+
++(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context
+                                andClassName: (NSString*) className attached: (BOOL) attached{
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:className
+                                              inManagedObjectContext:context];
+    
+    return [[NSManagedObject alloc] initWithEntity:entity
+                    insertIntoManagedObjectContext:attached ? context : nil];
+
 }
 
 +(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context

@@ -20,6 +20,13 @@
     return marca;
 }
 
++(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome attached: (BOOL) attached {
+    Marca *marca = (Marca*) [Marca managedObjectWithContext:ctx andClassName:@"Marca" attached: attached];
+    [marca setNome:nome];
+    
+    return marca;
+}
+
 -(NSString*) description {
     return [self nome];
 }

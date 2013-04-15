@@ -88,6 +88,11 @@
                        andMotorComLitros:Litros_16L
                           andCombustivel:CombustivelFlex];
     
+    
+    //Instanciando um ManagedObject de maneira Detached depois colocando no contexto!
+    Marca *fubica = [Marca marcaWithContext:ctx andNome:@"Fubica!!!" attached:NO];
+    [ctx insertObject:fubica];
+    
     block(YES);
 }
 
