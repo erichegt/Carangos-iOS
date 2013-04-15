@@ -1,16 +1,16 @@
 //
 //  DataSource.m
-//  Busao
+//  Carangos
 //
-//  Created by Diego Chohfi on 3/30/12.
-//  Copyright (c) 2012 None. All rights reserved.
+//  Created by Erich Egert on 4/15/13.
+//  Copyright (c) 2013 Starfuckers Inc. All rights reserved.
 //
 
 #import "DataSource.h"
 
 @interface DataSource()
 
-@property(nonatomic, unsafe_unretained) id<DataSourceDelegate> delegate;
+@property(nonatomic, strong) id<DataSourceDelegate> delegate; //WHY Y NO WORK unsafe_retained?!?
 @property(nonatomic, strong) NSURLConnection *connection;
 @property(nonatomic, strong) NSMutableData *mutableData;
 
@@ -19,24 +19,26 @@
 @implementation DataSource
 @synthesize connection, mutableData, delegate;
 
-- (id)initWithDelegate: (id<DataSourceDelegate>) _delegate {
+- (id)initWithDelegate: (id<DataSourceDelegate>) _delegateDS {
     self = [super init];
+    
     if (self) {
-        self.delegate = _delegate;
+        [self setDelegate:_delegateDS];
     }
+    
     return self;
 }
 
 - (void)inicializaConexao {
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-
+    
     if(connection){
         [connection cancel];
     }
     
     NSURLRequest *request= [NSURLRequest requestWithURL:[NSURL URLWithString:[delegate getURL]]
-                    cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
+                                            cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
     
     mutableData = [NSMutableData data];
     
@@ -55,15 +57,18 @@
 }
 - (void)connectionDidFinishLoading:(NSURLConnection *)_connection{
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-
+    
     if (_connection == connection){
         NSError* error;
-        NSMutableArray *resultados = [NSJSONSerialization JSONObjectWithData:mutableData
-                        options:NSJSONReadingMutableContainers error:&error];
+        
+        NSDictionary *resultados = [NSJSONSerialization JSONObjectWithData:mutableData options:kNilOptions error:&error];
+        
+//        NSMutableArray *resultados = [NSJSONSerialization JSONObjectWithData:mutableData
+//                                                                     options:NSJSONReadingMutableContainers error:&error];
         mutableData = nil;
         connection = nil;
         if(!error){
-            [delegate tratarRetorno:resultados];
+            [self.delegate parsearDados:resultados];
             return;
         }
     }

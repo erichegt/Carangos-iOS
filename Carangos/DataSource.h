@@ -1,9 +1,9 @@
 //
 //  DataSource.h
-//  Busao
+//  Carangos
 //
-//  Created by Diego Chohfi on 3/30/12.
-//  Copyright (c) 2012 None. All rights reserved.
+//  Created by Erich Egert on 4/15/13.
+//  Copyright (c) 2013 Starfuckers Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,7 +11,7 @@
 @protocol DataSourceDelegate <NSObject>
 
 - (NSString *) getURL;
-- (void) tratarRetorno: (NSMutableArray *) dados;
+- (void) parsearDados: (NSDictionary *) dados;
 - (void) problemaComunicacao;
 
 @end
@@ -22,3 +22,4 @@
 - (void)inicializaConexao;
 
 @end
+

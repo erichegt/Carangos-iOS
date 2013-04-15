@@ -29,14 +29,16 @@
 		773C3DD116E13BD300F1A042 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3DA416E13BD300F1A042 /* CoreData.framework */; };
 		773C3DD916E13BD300F1A042 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DD716E13BD300F1A042 /* InfoPlist.strings */; };
 		773C3DDC16E13BD300F1A042 /* CarangosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DDB16E13BD300F1A042 /* CarangosTests.m */; };
-		773C3DF516E1428100F1A042 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DF416E1428100F1A042 /* DataSource.m */; };
-		773C3DFC16E142E400F1A042 /* PostsControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3DFA16E142E400F1A042 /* PostsControllerViewController.m */; };
 		773C3DFD16E142E400F1A042 /* PostsControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3DFB16E142E400F1A042 /* PostsControllerViewController.xib */; };
 		773C3E0D16E1660000F1A042 /* Automovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E0C16E1660000F1A042 /* Automovel.m */; };
 		773C3E2016E1666F00F1A042 /* ModeloDeAutomovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E1D16E1666E00F1A042 /* ModeloDeAutomovel.m */; };
 		773C3E2116E1666F00F1A042 /* Marca.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E1F16E1666E00F1A042 /* Marca.m */; };
 		773C3E3416E2D58400F1A042 /* OpcoesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E3216E2D58400F1A042 /* OpcoesController.m */; };
 		773C3E3516E2D58400F1A042 /* OpcoesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3E3316E2D58400F1A042 /* OpcoesController.xib */; };
+		77BB9558171C7BB0006E588E /* Autor.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB9553171C7BB0006E588E /* Autor.m */; };
+		77BB9559171C7BB0006E588E /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB9555171C7BB0006E588E /* BlogPost.m */; };
+		77BB956E171C8531006E588E /* PostDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB956D171C8531006E588E /* PostDataSource.m */; };
+		77BB9571171C86A5006E588E /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB9570171C86A5006E588E /* DataSource.m */; };
 		77F063BD16E62C9B008FF9D7 /* PopulaBanco.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F063BC16E62C9B008FF9D7 /* PopulaBanco.m */; };
 		7C5EF13B1718BC040043AB67 /* BlogPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */; };
 		7C5EF13C1718BC040043AB67 /* BlogPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5EF13A1718BC040043AB67 /* BlogPostsViewController.xib */; };
@@ -81,10 +83,6 @@
 		773C3DD816E13BD300F1A042 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		773C3DDA16E13BD300F1A042 /* CarangosTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarangosTests.h; sourceTree = "<group>"; };
 		773C3DDB16E13BD300F1A042 /* CarangosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarangosTests.m; sourceTree = "<group>"; };
-		773C3DF316E1428000F1A042 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
-		773C3DF416E1428100F1A042 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
-		773C3DF916E142E400F1A042 /* PostsControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsControllerViewController.h; sourceTree = "<group>"; };
-		773C3DFA16E142E400F1A042 /* PostsControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsControllerViewController.m; sourceTree = "<group>"; };
 		773C3DFB16E142E400F1A042 /* PostsControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostsControllerViewController.xib; sourceTree = "<group>"; };
 		773C3E0B16E1660000F1A042 /* Automovel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Automovel.h; sourceTree = "<group>"; };
 		773C3E0C16E1660000F1A042 /* Automovel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Automovel.m; sourceTree = "<group>"; };
@@ -95,6 +93,14 @@
 		773C3E3116E2D58300F1A042 /* OpcoesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpcoesController.h; sourceTree = "<group>"; };
 		773C3E3216E2D58400F1A042 /* OpcoesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpcoesController.m; sourceTree = "<group>"; };
 		773C3E3316E2D58400F1A042 /* OpcoesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpcoesController.xib; sourceTree = "<group>"; };
+		77BB9552171C7BB0006E588E /* Autor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Autor.h; path = Carangos/Autor.h; sourceTree = "<group>"; };
+		77BB9553171C7BB0006E588E /* Autor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Autor.m; path = Carangos/Autor.m; sourceTree = "<group>"; };
+		77BB9554171C7BB0006E588E /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogPost.h; path = Carangos/BlogPost.h; sourceTree = "<group>"; };
+		77BB9555171C7BB0006E588E /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogPost.m; path = Carangos/BlogPost.m; sourceTree = "<group>"; };
+		77BB956C171C8531006E588E /* PostDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDataSource.h; sourceTree = "<group>"; };
+		77BB956D171C8531006E588E /* PostDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDataSource.m; sourceTree = "<group>"; };
+		77BB956F171C86A5006E588E /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		77BB9570171C86A5006E588E /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		77F063BB16E62C9B008FF9D7 /* PopulaBanco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopulaBanco.h; sourceTree = "<group>"; };
 		77F063BC16E62C9B008FF9D7 /* PopulaBanco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopulaBanco.m; sourceTree = "<group>"; };
 		7C5EF1381718BC040043AB67 /* BlogPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostsViewController.h; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 		773C3DA616E13BD300F1A042 /* Carangos */ = {
 			isa = PBXGroup;
 			children = (
+				77BB956B171C82EB006E588E /* Modelos */,
 				773C3DFF16E14A6B00F1A042 /* Persistencia */,
 				773C3DF716E1429700F1A042 /* DataSources */,
 				773C3DF616E1428500F1A042 /* Controllers */,
@@ -221,8 +228,10 @@
 		773C3DF716E1429700F1A042 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				773C3DF316E1428000F1A042 /* DataSource.h */,
-				773C3DF416E1428100F1A042 /* DataSource.m */,
+				77BB956C171C8531006E588E /* PostDataSource.h */,
+				77BB956D171C8531006E588E /* PostDataSource.m */,
+				77BB956F171C86A5006E588E /* DataSource.h */,
+				77BB9570171C86A5006E588E /* DataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -230,8 +239,6 @@
 		773C3DF816E142B000F1A042 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				773C3DF916E142E400F1A042 /* PostsControllerViewController.h */,
-				773C3DFA16E142E400F1A042 /* PostsControllerViewController.m */,
 				773C3DFB16E142E400F1A042 /* PostsControllerViewController.xib */,
 				7C5EF1381718BC040043AB67 /* BlogPostsViewController.h */,
 				7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */,
@@ -278,6 +285,18 @@
 				773C3E1F16E1666E00F1A042 /* Marca.m */,
 			);
 			name = Entidades;
+			sourceTree = "<group>";
+		};
+		77BB956B171C82EB006E588E /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				77BB9552171C7BB0006E588E /* Autor.h */,
+				77BB9553171C7BB0006E588E /* Autor.m */,
+				77BB9554171C7BB0006E588E /* BlogPost.h */,
+				77BB9555171C7BB0006E588E /* BlogPost.m */,
+			);
+			name = Modelos;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,13 +433,16 @@
 				773C3DBA16E13BD300F1A042 /* Carangos.xcdatamodeld in Sources */,
 				773C3DBD16E13BD300F1A042 /* MasterViewController.m in Sources */,
 				773C3DC016E13BD300F1A042 /* DetailViewController.m in Sources */,
-				773C3DFC16E142E400F1A042 /* PostsControllerViewController.m in Sources */,
 				773C3E0D16E1660000F1A042 /* Automovel.m in Sources */,
 				773C3E2016E1666F00F1A042 /* ModeloDeAutomovel.m in Sources */,
 				773C3E2116E1666F00F1A042 /* Marca.m in Sources */,
 				773C3E3416E2D58400F1A042 /* OpcoesController.m in Sources */,
 				77F063BD16E62C9B008FF9D7 /* PopulaBanco.m in Sources */,
 				7C5EF13B1718BC040043AB67 /* BlogPostsViewController.m in Sources */,
+				77BB9558171C7BB0006E588E /* Autor.m in Sources */,
+				77BB9559171C7BB0006E588E /* BlogPost.m in Sources */,
+				77BB956E171C8531006E588E /* PostDataSource.m in Sources */,
+				77BB9571171C86A5006E588E /* DataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +451,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				773C3DDC16E13BD300F1A042 /* CarangosTests.m in Sources */,
-				773C3DF516E1428100F1A042 /* DataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

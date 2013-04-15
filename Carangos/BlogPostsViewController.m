@@ -8,6 +8,8 @@
 
 #import "BlogPostsViewController.h"
 
+
+
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 #define kBlogPostsListURL [NSURL URLWithString:@"http://23.21.248.134:8080/Carangus/post/list"]
 
@@ -21,19 +23,32 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    dispatch_async(kBgQueue, ^{
-        NSData *data = [NSData dataWithContentsOfURL:kBlogPostsListURL];
-        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
-    });
+    PostDataSource *datasource = [[PostDataSource alloc] initWithDelegate:self];
+    [datasource buscaPosts];
+    
+//    dispatch_async(kBgQueue, ^{
+//        NSData *data = [NSData dataWithContentsOfURL:kBlogPostsListURL];
+//        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+//    });
 }
 
-- (void)fetchedData:(NSData *)responseData {
-    NSError *error;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    blogPosts = [json objectForKey:@"list"];
-    
+- (void) recebePosts: (NSArray*) posts {
+    NSLog(@"Recebendo posts: %@", posts);
+    blogPosts = posts;
     [blogPostsTableView reloadData];
 }
+
+- (void) problemaParaBuscarPosts {
+    NSLog(@"ZICA BUSCANDO POSTS -> CONTROLLER");
+}
+
+//- (void)fetchedData:(NSData *)responseData {
+//    NSError *error;
+//    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+//    blogPosts = [json objectForKey:@"list"];
+//    
+//    [blogPostsTableView reloadData];
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [blogPosts count];
@@ -46,10 +61,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     }
     
-    NSDictionary *blogPostInfo = [blogPosts objectAtIndex:indexPath.row];
-    NSDictionary *blogPostAuthor = [blogPostInfo objectForKey:@"autor"];
-    cell.textLabel.text = [blogPostInfo objectForKey:@"mensagem"];
-    cell.detailTextLabel.text = [blogPostAuthor objectForKey:@"nome"];
+//    NSDictionary *blogPostInfo = [blogPosts objectAtIndex:indexPath.row];
+//    NSDictionary *blogPostAuthor = [blogPostInfo objectForKey:@"autor"];
+//    cell.textLabel.text = [blogPostInfo objectForKey:@"mensagem"];
+//    cell.detailTextLabel.text = [blogPostAuthor objectForKey:@"nome"];
+
+    BlogPost *post = [blogPosts objectAtIndex:[indexPath row]];
+    cell.textLabel.text = [post mensagem];
+    cell.detailTextLabel.text = [[post autor]nome];
     
     return cell;
 }

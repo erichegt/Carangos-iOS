@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostDataSource.h"
 
-@interface BlogPostsViewController : UIViewController <UITableViewDataSource> {
+
+@interface BlogPostsViewController : UIViewController <UITableViewDataSource, PostDelegate> {
     __weak IBOutlet UITableView *blogPostsTableView;
     
     NSArray *blogPosts;
 }
+
+
 
 @end
