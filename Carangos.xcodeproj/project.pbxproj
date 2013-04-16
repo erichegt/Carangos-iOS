@@ -35,6 +35,9 @@
 		773C3E2116E1666F00F1A042 /* Marca.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E1F16E1666E00F1A042 /* Marca.m */; };
 		773C3E3416E2D58400F1A042 /* OpcoesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E3216E2D58400F1A042 /* OpcoesController.m */; };
 		773C3E3516E2D58400F1A042 /* OpcoesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3E3316E2D58400F1A042 /* OpcoesController.xib */; };
+		7767F5E0171DA16C002BF38A /* UIViewController+NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5DF171DA16C002BF38A /* UIViewController+NavigationController.m */; };
+		7767F5E3171DA1B8002BF38A /* UIDevice+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5E2171DA1B8002BF38A /* UIDevice+iPhone.m */; };
+		7767F5E6171DA1FD002BF38A /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5E5171DA1FD002BF38A /* NSArray+Functional.m */; };
 		77BB9558171C7BB0006E588E /* Autor.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB9553171C7BB0006E588E /* Autor.m */; };
 		77BB9559171C7BB0006E588E /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB9555171C7BB0006E588E /* BlogPost.m */; };
 		77BB956E171C8531006E588E /* PostDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB956D171C8531006E588E /* PostDataSource.m */; };
@@ -93,6 +96,12 @@
 		773C3E3116E2D58300F1A042 /* OpcoesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpcoesController.h; sourceTree = "<group>"; };
 		773C3E3216E2D58400F1A042 /* OpcoesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpcoesController.m; sourceTree = "<group>"; };
 		773C3E3316E2D58400F1A042 /* OpcoesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpcoesController.xib; sourceTree = "<group>"; };
+		7767F5DE171DA16C002BF38A /* UIViewController+NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationController.h"; sourceTree = "<group>"; };
+		7767F5DF171DA16C002BF38A /* UIViewController+NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationController.m"; sourceTree = "<group>"; };
+		7767F5E1171DA1B8002BF38A /* UIDevice+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+iPhone.h"; sourceTree = "<group>"; };
+		7767F5E2171DA1B8002BF38A /* UIDevice+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+iPhone.m"; sourceTree = "<group>"; };
+		7767F5E4171DA1FD002BF38A /* NSArray+Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Functional.h"; sourceTree = "<group>"; };
+		7767F5E5171DA1FD002BF38A /* NSArray+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Functional.m"; sourceTree = "<group>"; };
 		77BB9552171C7BB0006E588E /* Autor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Autor.h; path = Carangos/Autor.h; sourceTree = "<group>"; };
 		77BB9553171C7BB0006E588E /* Autor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Autor.m; path = Carangos/Autor.m; sourceTree = "<group>"; };
 		77BB9554171C7BB0006E588E /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogPost.h; path = Carangos/BlogPost.h; sourceTree = "<group>"; };
@@ -172,6 +181,7 @@
 		773C3DA616E13BD300F1A042 /* Carangos */ = {
 			isa = PBXGroup;
 			children = (
+				7767F5DC171DA0F8002BF38A /* Categories */,
 				77BB956B171C82EB006E588E /* Modelos */,
 				773C3DFF16E14A6B00F1A042 /* Persistencia */,
 				773C3DF716E1429700F1A042 /* DataSources */,
@@ -285,6 +295,19 @@
 				773C3E1F16E1666E00F1A042 /* Marca.m */,
 			);
 			name = Entidades;
+			sourceTree = "<group>";
+		};
+		7767F5DC171DA0F8002BF38A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7767F5DE171DA16C002BF38A /* UIViewController+NavigationController.h */,
+				7767F5DF171DA16C002BF38A /* UIViewController+NavigationController.m */,
+				7767F5E1171DA1B8002BF38A /* UIDevice+iPhone.h */,
+				7767F5E2171DA1B8002BF38A /* UIDevice+iPhone.m */,
+				7767F5E4171DA1FD002BF38A /* NSArray+Functional.h */,
+				7767F5E5171DA1FD002BF38A /* NSArray+Functional.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		77BB956B171C82EB006E588E /* Modelos */ = {
@@ -443,6 +466,9 @@
 				77BB9559171C7BB0006E588E /* BlogPost.m in Sources */,
 				77BB956E171C8531006E588E /* PostDataSource.m in Sources */,
 				77BB9571171C86A5006E588E /* DataSource.m in Sources */,
+				7767F5E0171DA16C002BF38A /* UIViewController+NavigationController.m in Sources */,
+				7767F5E3171DA1B8002BF38A /* UIDevice+iPhone.m in Sources */,
+				7767F5E6171DA1FD002BF38A /* NSArray+Functional.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +583,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Carangos/Carangos-Prefix.pch";
 				INFOPLIST_FILE = "Carangos/Carangos-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -569,7 +597,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Carangos/Carangos-Prefix.pch";
 				INFOPLIST_FILE = "Carangos/Carangos-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

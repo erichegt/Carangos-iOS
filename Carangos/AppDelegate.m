@@ -12,7 +12,8 @@
 
 #import "BlogPostsViewController.h"
 
-#import "Marca.h"
+#import "UIDevice+iPhone.h"
+#import "UIViewController+NavigationController.h"
 
 @implementation AppDelegate
 
@@ -23,20 +24,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-
-//    MasterViewController *masterViewController = [[MasterViewController alloc] init];
-//    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    
+    MasterViewController *masterViewController = [[MasterViewController alloc] init];
+    BlogPostsViewController *blogPostVC = [[BlogPostsViewController alloc] init];
     
 //    AppDelegate *appDelegate = self;
 //    [PopulaBanco executa:[self managedObjectContext] andSaveAction:^(bool ok) {
 //        [appDelegate saveContext];
 //    }];
     
-    BlogPostsViewController *blogPostVC = [[BlogPostsViewController alloc] init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:blogPostVC];
-
-    self.window.rootViewController = self.navigationController;
+    if ([UIDevice iPhone]) {
+        UITabBarController *tabBar = [[UITabBarController alloc] init];
+        [tabBar setViewControllers:@[[blogPostVC comNavigation],[masterViewController comNavigation]]];
+        self.window.rootViewController = tabBar;
+    } else {
+        UISplitViewController *splitView = [[UISplitViewController alloc] init];
+        [splitView setViewControllers:@[[blogPostVC comNavigation],[masterViewController comNavigation]]];
+        self.window.rootViewController = splitView;
+    }
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
