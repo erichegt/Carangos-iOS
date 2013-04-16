@@ -7,6 +7,7 @@
 //
 
 #import "BlogPostsViewController.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
 
 
 @interface BlogPostsViewController ()
@@ -17,16 +18,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    blogPosts = [[NSMutableArray alloc] init];
     
     PostDataSource *datasource = [[PostDataSource alloc] initWithDelegate:self];
     [datasource buscaPosts];
+    
+
+    [blogPostsTableView addInfiniteScrollingWithActionHandler:^{
+        BOOL precisaBuscarMais = YES; //TODO infinito mesmo?
+        
+        if (precisaBuscarMais) {
+            [datasource buscaPosts];
+        }
+    }];
 }
 
 - (void) recebePosts: (NSArray*) posts {
     NSLog(@"Recebendo posts: %@", posts);
-    blogPosts = posts;
+    [blogPosts addObjectsFromArray:posts];
     [blogPostsTableView reloadData];
+    [[blogPostsTableView infiniteScrollingView] stopAnimating];
 }
 
 - (void) problemaParaBuscarPosts {

@@ -7,11 +7,13 @@
 //
 
 #import "PostDataSource.h"
+#import "Pagina.h"
 
 @interface PostDataSource()
 
 @property(nonatomic, unsafe_unretained) id<PostDelegate> delegate;
 @property(nonatomic, strong) DataSource *dataSource;
+@property(nonatomic, strong) Pagina *paginaAtual;
 
 @end
 
@@ -24,6 +26,7 @@
     self = [super init];
     
     if (self) {
+        [self setPaginaAtual:[[Pagina alloc] init]];
         [self setDelegate:delegatePosts];
         [self setDataSource: [[DataSource alloc] initWithDelegate:self]];
     }
@@ -36,7 +39,7 @@
 }
 
 - (NSString *) getURL {
-    return @"http://23.21.248.134:8080/Carangus/post/list";
+    return [NSString stringWithFormat:@"http://23.21.248.134:8080/Carangus/post/list?%@", [[self paginaAtual] description]];
 }
 - (void) parsearDados: (NSDictionary *) dados {
     NSMutableArray *posts = [[NSMutableArray alloc] init];
@@ -49,6 +52,7 @@
     }
     
     [self.delegate recebePosts:posts];
+    [[self paginaAtual] proxima];
 }
 - (void) problemaComunicacao {
     NSLog(@"DADOS DE RETORNO ZICA!!!!");

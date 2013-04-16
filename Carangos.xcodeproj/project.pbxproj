@@ -38,6 +38,7 @@
 		7767F5E0171DA16C002BF38A /* UIViewController+NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5DF171DA16C002BF38A /* UIViewController+NavigationController.m */; };
 		7767F5E3171DA1B8002BF38A /* UIDevice+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5E2171DA1B8002BF38A /* UIDevice+iPhone.m */; };
 		7767F5E6171DA1FD002BF38A /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5E5171DA1FD002BF38A /* NSArray+Functional.m */; };
+		7767F602171DC390002BF38A /* Pagina.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F601171DC390002BF38A /* Pagina.m */; };
 		77BB9558171C7BB0006E588E /* Autor.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB9553171C7BB0006E588E /* Autor.m */; };
 		77BB9559171C7BB0006E588E /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB9555171C7BB0006E588E /* BlogPost.m */; };
 		77BB956E171C8531006E588E /* PostDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB956D171C8531006E588E /* PostDataSource.m */; };
@@ -102,6 +103,8 @@
 		7767F5E2171DA1B8002BF38A /* UIDevice+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+iPhone.m"; sourceTree = "<group>"; };
 		7767F5E4171DA1FD002BF38A /* NSArray+Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Functional.h"; sourceTree = "<group>"; };
 		7767F5E5171DA1FD002BF38A /* NSArray+Functional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Functional.m"; sourceTree = "<group>"; };
+		7767F600171DC390002BF38A /* Pagina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pagina.h; sourceTree = "<group>"; };
+		7767F601171DC390002BF38A /* Pagina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pagina.m; sourceTree = "<group>"; };
 		77BB9552171C7BB0006E588E /* Autor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Autor.h; path = Carangos/Autor.h; sourceTree = "<group>"; };
 		77BB9553171C7BB0006E588E /* Autor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Autor.m; path = Carangos/Autor.m; sourceTree = "<group>"; };
 		77BB9554171C7BB0006E588E /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogPost.h; path = Carangos/BlogPost.h; sourceTree = "<group>"; };
@@ -317,6 +320,8 @@
 				77BB9553171C7BB0006E588E /* Autor.m */,
 				77BB9554171C7BB0006E588E /* BlogPost.h */,
 				77BB9555171C7BB0006E588E /* BlogPost.m */,
+				7767F600171DC390002BF38A /* Pagina.h */,
+				7767F601171DC390002BF38A /* Pagina.m */,
 			);
 			name = Modelos;
 			path = ..;
@@ -469,6 +474,7 @@
 				7767F5E0171DA16C002BF38A /* UIViewController+NavigationController.m in Sources */,
 				7767F5E3171DA1B8002BF38A /* UIDevice+iPhone.m in Sources */,
 				7767F5E6171DA1FD002BF38A /* NSArray+Functional.m in Sources */,
+				7767F602171DC390002BF38A /* Pagina.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
