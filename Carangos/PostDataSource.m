@@ -39,7 +39,7 @@
 }
 
 - (NSString *) getURL {
-    return [NSString stringWithFormat:@"http://23.21.248.134:8080/Carangus/post/list?%@", [[self paginaAtual] description]];
+    return [NSString stringWithFormat:@"http://carangos.herokuapp.com/post/list?%@", [[self paginaAtual] description]];
 }
 - (void) parsearDados: (NSDictionary *) dados {
     NSMutableArray *posts = [[NSMutableArray alloc] init];
