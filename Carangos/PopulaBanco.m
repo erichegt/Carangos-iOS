@@ -15,6 +15,8 @@
 
 +(void) executa: (NSManagedObjectContext*) ctx andSaveAction:(void (^)(bool ok))block {
     
+    
+    
     Marca *gm = [Marca marcaWithContext:ctx andNome:@"General Motors"];
     
     [ModeloDeAutomovel modeloWithContext:ctx andNome:@"Celta"

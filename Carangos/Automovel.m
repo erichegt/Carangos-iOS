@@ -7,6 +7,7 @@
 //
 
 #import "Automovel.h"
+#import "NSManagedObject+ComFacilitadores.h"
 
 
 @implementation Automovel

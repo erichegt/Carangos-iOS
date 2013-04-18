@@ -7,6 +7,7 @@
 //
 
 #import "Marca.h"
+#import "NSManagedObject+ComFacilitadores.h"
 
 
 @implementation Marca

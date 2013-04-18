@@ -74,6 +74,8 @@
 }
 
 - (IBAction)escolherFabricante:(id)sender {
+    NSLog(@"Fabricante clicado %@", sender);
+    
     DetailViewController *_self = self;
     
     NSArray *marcas = [Marca todosWithContext:[self context]];

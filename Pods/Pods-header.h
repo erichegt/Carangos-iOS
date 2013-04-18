@@ -3,4 +3,6 @@
 
 #define __POD_FPPopover
 #define __POD_JASidePanels
+#define __POD_SDWebImage
+#define __POD_SDWebImage_MapKit
 #define __POD_SVPullToRefresh

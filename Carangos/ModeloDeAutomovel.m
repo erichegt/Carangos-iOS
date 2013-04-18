@@ -8,6 +8,7 @@
 
 #import "ModeloDeAutomovel.h"
 #import "Marca.h"
+#import "NSManagedObject+ComFacilitadores.h"
 
 @implementation ModeloDeAutomovel
 @dynamic cilindrada, combustivel, litrosMotor, nome, fabricante;

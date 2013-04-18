@@ -35,6 +35,10 @@
 		773C3E2116E1666F00F1A042 /* Marca.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E1F16E1666E00F1A042 /* Marca.m */; };
 		773C3E3416E2D58400F1A042 /* OpcoesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773C3E3216E2D58400F1A042 /* OpcoesController.m */; };
 		773C3E3516E2D58400F1A042 /* OpcoesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773C3E3316E2D58400F1A042 /* OpcoesController.xib */; };
+		774E84FB172042A0008A5A57 /* BlogPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 774E84FA172042A0008A5A57 /* BlogPostCell.m */; };
+		774E84FE172042D5008A5A57 /* BlogPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774E84FD172042D5008A5A57 /* BlogPostCell.xib */; };
+		774E850217204FCA008A5A57 /* no_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 774E850117204FCA008A5A57 /* no_image.png */; };
+		775945E9171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.m in Sources */ = {isa = PBXBuildFile; fileRef = 775945E8171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.m */; };
 		7767F5E0171DA16C002BF38A /* UIViewController+NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5DF171DA16C002BF38A /* UIViewController+NavigationController.m */; };
 		7767F5E3171DA1B8002BF38A /* UIDevice+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5E2171DA1B8002BF38A /* UIDevice+iPhone.m */; };
 		7767F5E6171DA1FD002BF38A /* NSArray+Functional.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5E5171DA1FD002BF38A /* NSArray+Functional.m */; };
@@ -97,6 +101,12 @@
 		773C3E3116E2D58300F1A042 /* OpcoesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpcoesController.h; sourceTree = "<group>"; };
 		773C3E3216E2D58400F1A042 /* OpcoesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpcoesController.m; sourceTree = "<group>"; };
 		773C3E3316E2D58400F1A042 /* OpcoesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpcoesController.xib; sourceTree = "<group>"; };
+		774E84F9172042A0008A5A57 /* BlogPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostCell.h; sourceTree = "<group>"; };
+		774E84FA172042A0008A5A57 /* BlogPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostCell.m; sourceTree = "<group>"; };
+		774E84FD172042D5008A5A57 /* BlogPostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogPostCell.xib; sourceTree = "<group>"; };
+		774E850117204FCA008A5A57 /* no_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_image.png; sourceTree = "<group>"; };
+		775945E7171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ComFacilitadores.h"; sourceTree = "<group>"; };
+		775945E8171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ComFacilitadores.m"; sourceTree = "<group>"; };
 		7767F5DE171DA16C002BF38A /* UIViewController+NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationController.h"; sourceTree = "<group>"; };
 		7767F5DF171DA16C002BF38A /* UIViewController+NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationController.m"; sourceTree = "<group>"; };
 		7767F5E1171DA1B8002BF38A /* UIDevice+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+iPhone.h"; sourceTree = "<group>"; };
@@ -184,6 +194,7 @@
 		773C3DA616E13BD300F1A042 /* Carangos */ = {
 			isa = PBXGroup;
 			children = (
+				774E850317204FDC008A5A57 /* Recursos */,
 				7767F5DC171DA0F8002BF38A /* Categories */,
 				77BB956B171C82EB006E588E /* Modelos */,
 				773C3DFF16E14A6B00F1A042 /* Persistencia */,
@@ -256,6 +267,9 @@
 				7C5EF1381718BC040043AB67 /* BlogPostsViewController.h */,
 				7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */,
 				7C5EF13A1718BC040043AB67 /* BlogPostsViewController.xib */,
+				774E84F9172042A0008A5A57 /* BlogPostCell.h */,
+				774E84FA172042A0008A5A57 /* BlogPostCell.m */,
+				774E84FD172042D5008A5A57 /* BlogPostCell.xib */,
 			);
 			name = Posts;
 			sourceTree = "<group>";
@@ -300,6 +314,14 @@
 			name = Entidades;
 			sourceTree = "<group>";
 		};
+		774E850317204FDC008A5A57 /* Recursos */ = {
+			isa = PBXGroup;
+			children = (
+				774E850117204FCA008A5A57 /* no_image.png */,
+			);
+			name = Recursos;
+			sourceTree = "<group>";
+		};
 		7767F5DC171DA0F8002BF38A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +331,8 @@
 				7767F5E2171DA1B8002BF38A /* UIDevice+iPhone.m */,
 				7767F5E4171DA1FD002BF38A /* NSArray+Functional.h */,
 				7767F5E5171DA1FD002BF38A /* NSArray+Functional.m */,
+				775945E7171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.h */,
+				775945E8171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -408,6 +432,8 @@
 				773C3DFD16E142E400F1A042 /* PostsControllerViewController.xib in Resources */,
 				773C3E3516E2D58400F1A042 /* OpcoesController.xib in Resources */,
 				7C5EF13C1718BC040043AB67 /* BlogPostsViewController.xib in Resources */,
+				774E84FE172042D5008A5A57 /* BlogPostCell.xib in Resources */,
+				774E850217204FCA008A5A57 /* no_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +501,8 @@
 				7767F5E3171DA1B8002BF38A /* UIDevice+iPhone.m in Sources */,
 				7767F5E6171DA1FD002BF38A /* NSArray+Functional.m in Sources */,
 				7767F602171DC390002BF38A /* Pagina.m in Sources */,
+				775945E9171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.m in Sources */,
+				774E84FB172042A0008A5A57 /* BlogPostCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

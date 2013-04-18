@@ -8,7 +8,7 @@
 
 #import "BlogPostsViewController.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
-
+#import "BlogPostCell.h"
 
 @interface BlogPostsViewController ()
 
@@ -31,6 +31,8 @@
             [datasource buscaPosts];
         }
     }];
+    
+    blogPostsTableView.rowHeight = 100; //TODO serio mesmo?
 }
 
 - (void) recebePosts: (NSArray*) posts {
@@ -49,15 +51,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *reuseIdentifier = @"pool";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    static NSString *reuseIdentifier = @"BlogPost";
+    BlogPostCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+        cell = [[BlogPostCell alloc] initWithFavoriteCallback:^(BlogPost *post) {
+            NSLog(@"Favoritando %@", [post mensagem]);
+        }];
     }
 
     BlogPost *post = [blogPosts objectAtIndex:[indexPath row]];
-    cell.textLabel.text = [post mensagem];
-    cell.detailTextLabel.text = [[post autor]nome];
+    [cell configureWith:post];
     
     return cell;
 }
