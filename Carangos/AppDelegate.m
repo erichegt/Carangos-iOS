@@ -15,6 +15,8 @@
 #import "UIDevice+iPhone.h"
 #import "UIViewController+NavigationController.h"
 
+#import "Marca.h"
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -32,7 +34,7 @@
 //    [PopulaBanco executa:[self managedObjectContext] andSaveAction:^(bool ok) {
 //        [appDelegate saveContext];
 //    }];
-    
+ 
     if ([UIDevice iPhone]) {
         UITabBarController *tabBar = [[UITabBarController alloc] init];
         [tabBar setViewControllers:@[[blogPostVC comNavigation],[masterViewController comNavigation]]];

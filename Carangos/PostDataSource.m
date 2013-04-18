@@ -8,12 +8,15 @@
 
 #import "PostDataSource.h"
 #import "Pagina.h"
+#import "Autor.h"
+#import "BlogPost.h"
 
 @interface PostDataSource()
 
 @property(nonatomic, unsafe_unretained) id<PostDelegate> delegate;
 @property(nonatomic, strong) DataSource *dataSource;
 @property(nonatomic, strong) Pagina *paginaAtual;
+@property(nonatomic, unsafe_unretained) NSManagedObjectContext *context;
 
 @end
 
@@ -22,13 +25,14 @@
 
 @synthesize delegate, dataSource;
 
--(id) initWithDelegate: (id<PostDelegate>) delegatePosts {
+-(id) initWithDelegate: (id<PostDelegate>) delegatePosts andContext: (NSManagedObjectContext*) ctx {
     self = [super init];
     
     if (self) {
         [self setPaginaAtual:[[Pagina alloc] init]];
         [self setDelegate:delegatePosts];
         [self setDataSource: [[DataSource alloc] initWithDelegate:self]];
+        [self setContext:ctx];
     }
     
     return self;
@@ -45,9 +49,13 @@
     NSMutableArray *posts = [[NSMutableArray alloc] init];
     
     for(NSDictionary *post in [dados objectForKey:@"list"]) {
+        NSString *mensagemPost = [post objectForKey:@"mensagem"];
         NSString *nomeAutor = [[post objectForKey:@"autor"] objectForKey:@"nome"];
-        Autor *autor = [[Autor alloc] initWithNome:nomeAutor];
-        BlogPost *blogPost = [[BlogPost alloc] initWithMensagem:[post objectForKey:@"mensagem"] andAutor:autor];
+        //TODO pegar do JSON!!!
+        NSString *avatarAutor = @"http://cinemagrafado.files.wordpress.com/2010/07/v-de-vinganca-2.jpg";
+        
+        Autor *autor = [Autor autorWithNome:nomeAutor andAvatar:avatarAutor andDetachedFromContext:[self context]];
+        BlogPost *blogPost = [BlogPost blogPostWithMensagem:mensagemPost andAutor:autor andDetachedFromContext:[self context]];
         [posts addObject:blogPost];
     }
     

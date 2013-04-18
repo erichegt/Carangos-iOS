@@ -5,6 +5,14 @@
         <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="modelo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ModeloDeAutomovel" syncable="YES"/>
     </entity>
+    <entity name="Autor" representedClassName="Autor" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BlogPost" representedClassName="BlogPost" syncable="YES">
+        <attribute name="mensagem" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="autor" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Autor" syncable="YES"/>
+    </entity>
     <entity name="Marca" representedClassName="Marca" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -19,5 +27,7 @@
         <element name="Automovel" positionX="160" positionY="192" width="128" height="90"/>
         <element name="Marca" positionX="160" positionY="192" width="128" height="60"/>
         <element name="ModeloDeAutomovel" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Autor" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="BlogPost" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>

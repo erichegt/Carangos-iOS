@@ -39,8 +39,7 @@
 }
 
 +(ModeloDeAutomovel*) modeloWithContext: (NSManagedObjectContext*) ctx {
-    return (ModeloDeAutomovel*) [ModeloDeAutomovel managedObjectWithContext:ctx
-                                                               andClassName:@"ModeloDeAutomovel"];
+    return (ModeloDeAutomovel*) [self managedObjectWithContext:ctx];
 }
 
 +(ModeloDeAutomovel*) modeloWithContext: (NSManagedObjectContext*) ctx
@@ -49,8 +48,7 @@
                       andMotorComLitros: (Litros) litros
                          andCombustivel: (Combustivel) combustivel {
     
-    ModeloDeAutomovel *modelo = (ModeloDeAutomovel*) [ModeloDeAutomovel managedObjectWithContext:ctx
-                                                                    andClassName:@"ModeloDeAutomovel"];
+    ModeloDeAutomovel *modelo = (ModeloDeAutomovel*) [self managedObjectWithContext:ctx];
     
     [modelo updateAtributesWithNome:nome andFabricante:marca andMotorComLitros:litros andCombustivel:combustivel];
     
@@ -58,13 +56,11 @@
 }
 
 +(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx {
-    NSFetchRequest *fetch = [ModeloDeAutomovel createFetch:ctx andClassName:@"ModeloDeAutomovel"];
-    
-    return [ctx executeFetchRequest:fetch error:nil];
+    return [self allWithContext:ctx];
 }
 
 +(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx andMarca: (Marca*) marca{
-    NSFetchRequest *fetch = [ModeloDeAutomovel createFetch:ctx andClassName:@"ModeloDeAutomovel"];
+    NSFetchRequest *fetch = [self createFetch:ctx];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"fabricante = %@" argumentArray:[NSArray arrayWithObject:marca]];
     

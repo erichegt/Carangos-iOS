@@ -8,36 +8,39 @@
 
 #import "NSManagedObject+ComFacilitadores.h"
 
+
 @implementation NSManagedObject (ComFacilitadores)
 
-+(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context
-                                andClassName: (NSString*) className{
-    
-    return [NSEntityDescription insertNewObjectForEntityForName: className
-                                         inManagedObjectContext: context];
-}
-
-+(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context
-                                andClassName: (NSString*) className attached: (BOOL) attached{
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:className
++(NSManagedObject*) detachedManagedObjectWithContext:(NSManagedObjectContext*) context{
+    NSEntityDescription *entity = [NSEntityDescription entityForName: NSStringFromClass(self)
                                               inManagedObjectContext:context];
     
     return [[NSManagedObject alloc] initWithEntity:entity
-                    insertIntoManagedObjectContext:attached ? context : nil];
-    
+                    insertIntoManagedObjectContext:nil];
 }
 
-+(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context
-                  andClassName: (NSString*) className{
++(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context {
+    
+    return [NSEntityDescription insertNewObjectForEntityForName: NSStringFromClass(self)
+                                         inManagedObjectContext: context];
+}
+
+
++(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context{
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity =
-    [NSEntityDescription entityForName: className inManagedObjectContext:context];
+    [NSEntityDescription entityForName: NSStringFromClass(self) inManagedObjectContext:context];
     
     [fetchRequest setEntity:entity];
     
     return fetchRequest;
+}
+
++(NSArray*) allWithContext: (NSManagedObjectContext*) ctx {
+    NSFetchRequest *fetch = [self createFetch:ctx ];
+    
+    return [ctx executeFetchRequest:fetch error:nil];
 }
 
 @end

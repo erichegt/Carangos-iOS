@@ -20,7 +20,7 @@
                             andCor: (NSString*) cor
                             andAno: (int) ano {
     
-    Automovel *automovel = (Automovel*) [Automovel managedObjectWithContext:ctx andClassName:@"Automovel"];
+    Automovel *automovel = (Automovel*) [self managedObjectWithContext:ctx];
     
     [automovel setModelo:modelo];
     [automovel setCor:cor];

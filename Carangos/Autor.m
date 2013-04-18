@@ -2,25 +2,25 @@
 //  Autor.m
 //  Carangos
 //
-//  Created by Erich Egert on 4/12/13.
+//  Created by Erich Egert on 4/18/13.
 //  Copyright (c) 2013 Starfuckers Inc. All rights reserved.
 //
 
 #import "Autor.h"
+#import "NSManagedObject+ComFacilitadores.h"
+
 
 @implementation Autor
 
-@synthesize nome;
+@dynamic nome;
+@dynamic avatar;
 
-
--(id) initWithNome: (NSString*) _nome {
-    self = [self init];
++(Autor*) autorWithNome: (NSString*) nome andAvatar: (NSString*) avatar andDetachedFromContext:(NSManagedObjectContext*) ctx{
+    Autor *a = (Autor*)[self detachedManagedObjectWithContext:ctx];
+    [a setNome:nome];
+    [a setAvatar:avatar];
     
-    if (self) {
-        [self setNome:_nome];
-    }
-    
-    return self;
+    return a;
 }
 
 @end

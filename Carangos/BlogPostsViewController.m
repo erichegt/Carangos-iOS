@@ -20,7 +20,7 @@
     [super viewDidLoad];
     blogPosts = [[NSMutableArray alloc] init];
     
-    PostDataSource *datasource = [[PostDataSource alloc] initWithDelegate:self];
+    PostDataSource *datasource = [[PostDataSource alloc] initWithDelegate:self andContext:[self context]];
     [datasource buscaPosts];
     
 

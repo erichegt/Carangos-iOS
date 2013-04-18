@@ -20,6 +20,6 @@
 @interface PostDataSource : NSObject<DataSourceDelegate>
 
 -(void) buscaPosts;
--(id) initWithDelegate: (id<PostDelegate>) delegate;
+-(id) initWithDelegate: (id<PostDelegate>) delegatePosts andContext: (NSManagedObjectContext*) ctx;
 
 @end

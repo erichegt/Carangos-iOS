@@ -17,7 +17,7 @@
     
     
     
-    Marca *gm = [Marca marcaWithContext:ctx andNome:@"General Motors"];
+    Marca *gm = [Marca marcaWithNome:@"General Motors" andFromContext:ctx];
     
     [ModeloDeAutomovel modeloWithContext:ctx andNome:@"Celta"
                            andFabricante:gm
@@ -34,7 +34,7 @@
                        andMotorComLitros:Litros_20L
                           andCombustivel:CombustivelFlex];
     
-    Marca *fiat = [Marca marcaWithContext:ctx andNome:@"Fiat"];
+    Marca *fiat = [Marca marcaWithNome:@"Fiat" andFromContext:ctx];
     
     [ModeloDeAutomovel modeloWithContext:ctx andNome:@"Palio"
                            andFabricante:fiat
@@ -51,7 +51,7 @@
                        andMotorComLitros:Litros_20L
                           andCombustivel:CombustivelFlex];
     
-    Marca *vw = [Marca marcaWithContext:ctx andNome:@"VolksWagen"];
+    Marca *vw = [Marca marcaWithNome:@"VolksWagen" andFromContext:ctx];
     
     [ModeloDeAutomovel modeloWithContext:ctx andNome:@"Gol"
                            andFabricante:vw
@@ -73,7 +73,7 @@
                        andMotorComLitros:Litros_20L
                           andCombustivel:CombustivelFlex];
     
-    Marca *nissan = [Marca marcaWithContext:ctx andNome:@"Nissan"];
+    Marca *nissan = [Marca marcaWithNome:@"Nissan" andFromContext:ctx];
     
     [ModeloDeAutomovel modeloWithContext:ctx andNome:@"March"
                            andFabricante:nissan
@@ -92,8 +92,8 @@
     
     
     //Instanciando um ManagedObject de maneira Detached depois colocando no contexto!
-    Marca *fubica = [Marca marcaWithContext:ctx andNome:@"Fubica!!!" attached:NO];
-    [ctx insertObject:fubica];
+//    Marca *fubica = [Marca marcaWithNome:@"Zuzuzum" andDetachedFromContext:ctx];
+//    [ctx insertObject:fubica];
     
     block(YES);
 }

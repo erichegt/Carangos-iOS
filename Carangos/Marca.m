@@ -14,31 +14,26 @@
 
 @dynamic nome;
 
-+(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome{
-    Marca *marca = (Marca*) [Marca managedObjectWithContext:ctx andClassName:@"Marca"];
-    [marca setNome:nome];
++(Marca*) marcaWithNome: (NSString*) nome andDetachedFromContext: (NSManagedObjectContext*) ctx{
+    Marca *nova = (Marca*)[self detachedManagedObjectWithContext:ctx];
+    [nova setNome:nome];
     
-    return marca;
+    return nova;
 }
 
-+(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome attached: (BOOL) attached {
-    Marca *marca = (Marca*) [Marca managedObjectWithContext:ctx andClassName:@"Marca" attached: attached];
-    [marca setNome:nome];
++(Marca*) marcaWithNome: (NSString*) nome andFromContext: (NSManagedObjectContext*) ctx{
+    Marca *nova = (Marca*)[self managedObjectWithContext:ctx];
+    [nova setNome:nome];
     
-    return marca;
+    return nova;
+}
+
++(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx {
+    return [self allWithContext:ctx];
 }
 
 -(NSString*) description {
     return [self nome];
 }
-
-
-+(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx {
-    NSFetchRequest *fetch = [Marca createFetch:ctx andClassName:@"Marca"];
-    
-    return [ctx executeFetchRequest:fetch error:nil];
-}
-
-
 
 @end

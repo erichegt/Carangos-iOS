@@ -14,9 +14,9 @@
 
 @property (nonatomic, retain) NSString * nome;
 
-+(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome;
++(Marca*) marcaWithNome: (NSString*) nome andDetachedFromContext: (NSManagedObjectContext*) ctx;
 
-+(Marca*) marcaWithContext: (NSManagedObjectContext*) ctx andNome: (NSString*) nome attached: (BOOL) attached;
++(Marca*) marcaWithNome: (NSString*) nome andFromContext: (NSManagedObjectContext*) ctx;
 
 +(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx;
 

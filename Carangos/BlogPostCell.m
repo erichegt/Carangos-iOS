@@ -10,16 +10,17 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface BlogPostCell()
-    @property(nonatomic, strong) BlogPost* item;
-    @property(unsafe_unretained, nonatomic)  UIImageView *imagem; //strong?
-    @property(unsafe_unretained, nonatomic)  UITextView *autor; //strong?
-    @property(unsafe_unretained, nonatomic)  UITextView *mensagem; //strong?
+    @property(unsafe_unretained, nonatomic) BlogPost* item;
+    @property(unsafe_unretained, nonatomic)  UIImageView *imagem;
+    @property(unsafe_unretained, nonatomic)  UILabel *autor;
+    @property(unsafe_unretained, nonatomic)  UILabel *mensagem;
+    @property(unsafe_unretained, nonatomic)  UIImageView *estrela;
     @property(nonatomic, strong) void (^callback)(BlogPost *);
 @end
 
 @implementation BlogPostCell
 
-@synthesize item;
+@synthesize item, imagem, mensagem, autor, estrela;
 
 - (id)initWithFavoriteCallback:(void (^)(BlogPost* post))block {
     NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"BlogPostCell"
@@ -28,18 +29,33 @@
 
     if (self) {
         [self setImagem:(UIImageView*)[self viewWithTag:60]];
-        [self setAutor:(UITextView*) [self viewWithTag:61]];
-        [self setMensagem:(UITextView*) [self viewWithTag:62]];
+        [self setAutor:(UILabel*) [self viewWithTag:61]];
+        [self setMensagem:(UILabel*) [self viewWithTag:62]];
+        [self setEstrela:(UIImageView*)[self viewWithTag:63]];
+        [self setCallback:block];
+        
+        UITapGestureRecognizer *onTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoritar)];
+        
+        [onTap setNumberOfTapsRequired:1];
+        
+        [self.estrela addGestureRecognizer:onTap];
+        [self.estrela setUserInteractionEnabled:YES];
+
     }
     
     return self;
 }
 
+-(void) favoritar {
+    self.callback([self item]);
+}
+
 -(void) configureWith:(BlogPost*) post{
-    [[self autor] setText:[[post autor] nome]];
+    Autor *a = [post autor];
+    [[self autor] setText:[a nome]];
     [[self mensagem] setText:[post mensagem]];
     
-    [self.imagem setImageWithURL:[NSURL URLWithString:@"http://cinemagrafado.files.wordpress.com/2010/07/v-de-vinganca-2.jpg"]
+    [self.imagem setImageWithURL:[NSURL URLWithString:[[post autor] avatar]]
                 placeholderImage:[UIImage imageNamed:@"no_image.png"]];
 }
 

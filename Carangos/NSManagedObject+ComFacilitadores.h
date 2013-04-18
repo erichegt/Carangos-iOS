@@ -10,14 +10,9 @@
 
 @interface NSManagedObject (ComFacilitadores)
 
-+(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context
-                                andClassName: (NSString*) className;
-
-+(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context
-                  andClassName: (NSString*) className;
-
-+(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context
-                                andClassName: (NSString*) className attached: (BOOL) attached;
-
++(NSManagedObject*) detachedManagedObjectWithContext:(NSManagedObjectContext*) context;
++(NSManagedObject*) managedObjectWithContext:(NSManagedObjectContext*) context;
++(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context;
++(NSArray*) allWithContext: (NSManagedObjectContext*) ctx;
 
 @end
