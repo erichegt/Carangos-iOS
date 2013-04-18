@@ -29,8 +29,8 @@
 +(NSFetchRequest*) createFetch:(NSManagedObjectContext*) context{
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity =
-    [NSEntityDescription entityForName: NSStringFromClass(self) inManagedObjectContext:context];
+    NSEntityDescription *entity =  [NSEntityDescription entityForName: NSStringFromClass(self)
+                                               inManagedObjectContext:context];
     
     [fetchRequest setEntity:entity];
     

@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "Marca.h"
 #import "ModeloDeAutomovel.h"
+#import "Autor.h"
 
 @implementation PopulaBanco
 
@@ -94,6 +95,25 @@
     //Instanciando um ManagedObject de maneira Detached depois colocando no contexto!
 //    Marca *fubica = [Marca marcaWithNome:@"Zuzuzum" andDetachedFromContext:ctx];
 //    [ctx insertObject:fubica];
+    
+    Autor *novo = [Autor autorWithNome:@"Marotinus" andAvatar:@"http://yannickloriot.com/wp-content/uploads/2012/03/Copying-Magical-Record-Source-Folder.png" andDetachedFromContext:ctx];
+    
+    [ctx insertObject:novo];
+    
+    Autor *mesmo = [Autor autorWithNome:@"Marotinus" andAvatar:@"http://yannickloriot.com/wp-content/uploads/2012/03/Copying-Magical-Record-Source-Folder.png" andDetachedFromContext:ctx];
+    
+    Autor *marotinus =[mesmo salvaOuBuscaNoContext:ctx];
+    
+    Autor *deNovo =[mesmo salvaOuBuscaNoContext:ctx];
+
+    NSLog(@"------------------------------------------------------------------------------------------");
+    
+    NSLog(@"NOVO: %@", novo);
+    NSLog(@"MESMO: %@", mesmo);
+    NSLog(@"MAROTO: %@", marotinus);
+    NSLog(@"MAROTO: %@", deNovo);
+    
+    NSLog(@"------------------------------------------------------------------------------------------");
     
     block(YES);
 }

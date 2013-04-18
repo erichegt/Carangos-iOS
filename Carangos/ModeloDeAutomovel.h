@@ -69,4 +69,6 @@ typedef enum {
 
 +(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx;
 
++(NSArray*) todosWithContext: (NSManagedObjectContext*) ctx andMarca: (Marca*) marca;
+
 @end

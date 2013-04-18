@@ -16,5 +16,6 @@
 @property (nonatomic, retain) NSString * avatar;
 
 +(Autor*) autorWithNome: (NSString*) nome andAvatar: (NSString*) avatar andDetachedFromContext:(NSManagedObjectContext*) ctx;
+-(Autor*) salvaOuBuscaNoContext: (NSManagedObjectContext*) ctx;
 
 @end
