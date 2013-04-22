@@ -40,6 +40,7 @@
 		774E850217204FCA008A5A57 /* no_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 774E850117204FCA008A5A57 /* no_image.png */; };
 		774E851517206DB0008A5A57 /* Autor.m in Sources */ = {isa = PBXBuildFile; fileRef = 774E851417206DB0008A5A57 /* Autor.m */; };
 		774E851817206DC1008A5A57 /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 774E851717206DC1008A5A57 /* BlogPost.m */; };
+		77509D821725F519001458FD /* MyTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77509D811725F519001458FD /* MyTimer.m */; };
 		775945E9171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.m in Sources */ = {isa = PBXBuildFile; fileRef = 775945E8171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.m */; };
 		7767F5E0171DA16C002BF38A /* UIViewController+NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5DF171DA16C002BF38A /* UIViewController+NavigationController.m */; };
 		7767F5E3171DA1B8002BF38A /* UIDevice+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F5E2171DA1B8002BF38A /* UIDevice+iPhone.m */; };
@@ -110,6 +111,8 @@
 		774E851417206DB0008A5A57 /* Autor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Autor.m; sourceTree = "<group>"; };
 		774E851617206DC1008A5A57 /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogPost.h; path = ../BlogPost.h; sourceTree = "<group>"; };
 		774E851717206DC1008A5A57 /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogPost.m; path = ../BlogPost.m; sourceTree = "<group>"; };
+		77509D801725F519001458FD /* MyTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTimer.h; sourceTree = "<group>"; };
+		77509D811725F519001458FD /* MyTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTimer.m; sourceTree = "<group>"; };
 		775945E7171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ComFacilitadores.h"; sourceTree = "<group>"; };
 		775945E8171EC8E300CC6695 /* NSManagedObject+ComFacilitadores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ComFacilitadores.m"; sourceTree = "<group>"; };
 		7767F5DE171DA16C002BF38A /* UIViewController+NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationController.h"; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				773C3DAF16E13BD300F1A042 /* AppDelegate.h */,
 				773C3DB016E13BD300F1A042 /* AppDelegate.m */,
 				773C3DA716E13BD300F1A042 /* Supporting Files */,
+				77509D801725F519001458FD /* MyTimer.h */,
+				77509D811725F519001458FD /* MyTimer.m */,
 			);
 			path = Carangos;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				774E84FB172042A0008A5A57 /* BlogPostCell.m in Sources */,
 				774E851517206DB0008A5A57 /* Autor.m in Sources */,
 				774E851817206DC1008A5A57 /* BlogPost.m in Sources */,
+				77509D821725F519001458FD /* MyTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

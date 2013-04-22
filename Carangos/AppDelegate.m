@@ -17,7 +17,12 @@
 
 #import "Marca.h"
 
-@implementation AppDelegate
+#import "MyTimer.h"
+
+@implementation AppDelegate{
+    MyTimer *timerMaroto;
+    int times;
+}
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -29,6 +34,16 @@
     
     MasterViewController *masterViewController = [[MasterViewController alloc] init];
     BlogPostsViewController *blogPostVC = [[BlogPostsViewController alloc] init];
+    
+    times = 0;
+    
+    MyTimer *timer = [[MyTimer alloc] initWithTimeout:2.0 andBlock:^BOOL{
+        NSLog(@"AAAAEEEEE");
+        return times++>10;
+    }];
+                      
+    
+    timerMaroto = timer;
     
 //    AppDelegate *appDelegate = self;
 //    [PopulaBanco executa:[self managedObjectContext] andSaveAction:^(bool ok) {

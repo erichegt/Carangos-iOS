@@ -38,7 +38,6 @@
 }
 
 - (void) recebePosts: (NSArray*) posts {
-    NSLog(@"Recebendo posts: %@", posts);
     [blogPosts addObjectsFromArray:posts];
     [blogPostsTableView reloadData];
     [[blogPostsTableView infiniteScrollingView] stopAnimating];
