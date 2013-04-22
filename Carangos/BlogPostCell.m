@@ -9,61 +9,37 @@
 #import "BlogPostCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface BlogPostCell()
-    @property(unsafe_unretained, nonatomic) BlogPost* item;
-    @property(unsafe_unretained, nonatomic)  UIImageView *imagem;
-    @property(unsafe_unretained, nonatomic)  UILabel *autor;
-    @property(unsafe_unretained, nonatomic)  UILabel *mensagem;
-    @property(unsafe_unretained, nonatomic)  UIImageView *estrela;
-    @property(nonatomic, strong) void (^callback)(BlogPost *);
+@interface BlogPostCell() {
+    void (^callbackFavoritar)(BlogPost *);
+}
+
+    @property(weak, nonatomic) BlogPost* item;
 @end
 
 @implementation BlogPostCell
 
-@synthesize item, imagem, mensagem, autor, estrela;
-
-- (id)initWithFavoriteCallback:(void (^)(BlogPost* post))block {
-    NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"BlogPostCell"
-                                                             owner:nil options:nil];
-    self = [topLevelObjects objectAtIndex:0];
-
-    if (self) {
-        [self setImagem:(UIImageView*)[self viewWithTag:60]];
-        [self setAutor:(UILabel*) [self viewWithTag:61]];
-        [self setMensagem:(UILabel*) [self viewWithTag:62]];
-        [self setEstrela:(UIImageView*)[self viewWithTag:63]];
-        [self setCallback:block];
-        
-        UITapGestureRecognizer *onTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoritar)];
-        
-        [onTap setNumberOfTapsRequired:1];
-        
-        [self.estrela addGestureRecognizer:onTap];
-        [self.estrela setUserInteractionEnabled:YES];
-
-    }
+- (void)awakeFromNib {
+    self.estrela.userInteractionEnabled = YES;
     
-    return self;
+    UITapGestureRecognizer *onTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoritar)];
+    [onTap setNumberOfTapsRequired:1];
+    
+    [self.estrela addGestureRecognizer:onTap];
 }
 
--(void) favoritar {
-    self.callback([self item]);
+- (void)favoritar {
+    callbackFavoritar([self item]);
 }
 
--(void) configureWith:(BlogPost*) post{
-    Autor *a = [post autor];
-    [[self autor] setText:[a nome]];
-    [[self mensagem] setText:[post mensagem]];
+- (void)configureWith:(BlogPost *)post andCallbackFavoritar:(void (^)(BlogPost *))callback {
+    self.item = post;
     
-    [self.imagem setImageWithURL:[NSURL URLWithString:[[post autor] avatar]]
+    self.autor.text = self.item.autor.nome;
+    self.mensagem.text = self.item.mensagem;
+    
+    [self.imagem setImageWithURL:[NSURL URLWithString:self.item.autor.avatar]
                 placeholderImage:[UIImage imageNamed:@"no_image.png"]];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    callbackFavoritar = callback;
 }
 
 @end

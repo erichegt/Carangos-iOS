@@ -12,10 +12,7 @@
 
 @interface BlogPostsViewController : UIViewController <UITableViewDataSource, PostDelegate> {
     __weak IBOutlet UITableView *blogPostsTableView;
-    
     NSMutableArray *blogPosts;
 }
-
-
 
 @end

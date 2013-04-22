@@ -11,18 +11,17 @@
 #import "BlogPostCell.h"
 
 @interface BlogPostsViewController ()
-
 @end
 
 @implementation BlogPostsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     blogPosts = [[NSMutableArray alloc] init];
     
     PostDataSource *datasource = [[PostDataSource alloc] initWithDelegate:self andContext:[self context]];
     [datasource buscaPosts];
-    
 
     [blogPostsTableView addInfiniteScrollingWithActionHandler:^{
         BOOL precisaBuscarMais = YES; //TODO infinito mesmo?
@@ -33,6 +32,9 @@
     }];
     
     blogPostsTableView.rowHeight = 100; //TODO serio mesmo?
+    
+    UINib *blogPostCell = [UINib nibWithNibName:@"BlogPostCell" bundle:nil];
+    [blogPostsTableView registerNib:blogPostCell forCellReuseIdentifier:@"BlogPostCellReuseIdentifer"];
 }
 
 - (void) recebePosts: (NSArray*) posts {
@@ -51,18 +53,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *reuseIdentifier = @"BlogPost";
+    static NSString *reuseIdentifier = @"BlogPostCellReuseIdentifer";
     BlogPostCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     
-    if (!cell) {
-        cell = [[BlogPostCell alloc] initWithFavoriteCallback:^(BlogPost *post) {
-            NSLog(@"Favoritando %@", [post mensagem]);
-        }];
-    }
-
     BlogPost *post = [blogPosts objectAtIndex:[indexPath row]];
-    [cell configureWith:post];
-    
+    [cell configureWith:post andCallbackFavoritar:^(BlogPost * blogPost) {
+        NSLog(@"Favoritado Blog Post: %@", blogPost);
+    }];
+        
     return cell;
 }
 

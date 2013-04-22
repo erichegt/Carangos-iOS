@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Automovel" representedClassName="Automovel" syncable="YES">
         <attribute name="ano" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,9 +25,9 @@
     </entity>
     <elements>
         <element name="Automovel" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Marca" positionX="160" positionY="192" width="128" height="60"/>
-        <element name="ModeloDeAutomovel" positionX="160" positionY="192" width="128" height="120"/>
         <element name="Autor" positionX="160" positionY="192" width="128" height="75"/>
         <element name="BlogPost" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Marca" positionX="-227" positionY="180" width="128" height="60"/>
+        <element name="ModeloDeAutomovel" positionX="-378" positionY="-126" width="128" height="120"/>
     </elements>
 </model>

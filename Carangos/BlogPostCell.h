@@ -11,8 +11,11 @@
 
 @interface BlogPostCell : UITableViewCell
 
--(void) configureWith:(BlogPost*) post;
+@property (weak, nonatomic) IBOutlet UIImageView *imagem;
+@property (weak, nonatomic) IBOutlet UILabel *autor;
+@property (weak, nonatomic) IBOutlet UILabel *mensagem;
+@property (weak, nonatomic) IBOutlet UIImageView *estrela;
 
-- (id)initWithFavoriteCallback:(void (^)(BlogPost* post))block;
+- (void)configureWith:(BlogPost*)post andCallbackFavoritar:(void (^)(BlogPost *))callback;
 
 @end

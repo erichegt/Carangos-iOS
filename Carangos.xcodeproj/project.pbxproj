@@ -50,6 +50,7 @@
 		77F063BD16E62C9B008FF9D7 /* PopulaBanco.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F063BC16E62C9B008FF9D7 /* PopulaBanco.m */; };
 		7C5EF13B1718BC040043AB67 /* BlogPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */; };
 		7C5EF13C1718BC040043AB67 /* BlogPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5EF13A1718BC040043AB67 /* BlogPostsViewController.xib */; };
+		7C7B95111725D7E60017429E /* estrela.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7B95101725D7E60017429E /* estrela.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		7C5EF1381718BC040043AB67 /* BlogPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostsViewController.h; sourceTree = "<group>"; };
 		7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostsViewController.m; sourceTree = "<group>"; };
 		7C5EF13A1718BC040043AB67 /* BlogPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogPostsViewController.xib; sourceTree = "<group>"; };
+		7C7B95101725D7E60017429E /* estrela.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estrela.png; sourceTree = "<group>"; };
 		BAD30E15B1844F1FBF7CFA72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -321,6 +323,7 @@
 		774E850317204FDC008A5A57 /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
+				7C7B95101725D7E60017429E /* estrela.png */,
 				774E850117204FCA008A5A57 /* no_image.png */,
 			);
 			name = Recursos;
@@ -434,6 +437,7 @@
 				7C5EF13C1718BC040043AB67 /* BlogPostsViewController.xib in Resources */,
 				774E84FE172042D5008A5A57 /* BlogPostCell.xib in Resources */,
 				774E850217204FCA008A5A57 /* no_image.png in Resources */,
+				7C7B95111725D7E60017429E /* estrela.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
