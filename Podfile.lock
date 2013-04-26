@@ -1,4 +1,5 @@
 PODS:
+  - AFNetworking (1.2.1)
   - FPPopover (1.1)
   - JASidePanels (1.2.1)
   - SDWebImage (3.2):
@@ -7,12 +8,14 @@ PODS:
   - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
+  - AFNetworking (~> 1.2.1)
   - FPPopover (~> 1.1)
   - JASidePanels (~> 1.2.1)
   - SDWebImage (~> 3.2)
   - SVPullToRefresh (~> 0.4.1)
 
 SPEC CHECKSUMS:
+  AFNetworking: 616da0028916ce296f5c3cef74e5552eb4e10e13
   FPPopover: 80927060f59836f3b373716b8898535979c7f971
   JASidePanels: e37a175f06d5e228733daf276b31e2b2f6fade5f
   SDWebImage: 8082fe8d658ccafaaecd9e5ecda12ed01f09ba9c

@@ -9,6 +9,8 @@
 #import "BlogPostsViewController.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
 #import "BlogPostCell.h"
+#import "NovoBlogPostViewController.h"
+
 
 @interface BlogPostsViewController ()
 @end
@@ -17,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Novo Post" style:UIBarButtonSystemItemAdd target:self action:@selector(irParaFormBlogPost)]];
     
     blogPosts = [[NSMutableArray alloc] init];
     
@@ -35,6 +39,12 @@
     
     UINib *blogPostCell = [UINib nibWithNibName:@"BlogPostCell" bundle:nil];
     [blogPostsTableView registerNib:blogPostCell forCellReuseIdentifier:@"BlogPostCellReuseIdentifer"];
+}
+-(void) irParaFormBlogPost {
+    NovoBlogPostViewController *controller = [[NovoBlogPostViewController alloc] init];
+    
+    [self.navigationController pushViewController:controller animated:YES];
+
 }
 
 - (void) recebePosts: (NSArray*) posts {

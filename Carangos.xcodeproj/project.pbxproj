@@ -48,6 +48,8 @@
 		7767F602171DC390002BF38A /* Pagina.m in Sources */ = {isa = PBXBuildFile; fileRef = 7767F601171DC390002BF38A /* Pagina.m */; };
 		77BB956E171C8531006E588E /* PostDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB956D171C8531006E588E /* PostDataSource.m */; };
 		77BB9571171C86A5006E588E /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB9570171C86A5006E588E /* DataSource.m */; };
+		77E704491729EA9B008AC158 /* NovoBlogPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E704471729EA98008AC158 /* NovoBlogPostViewController.m */; };
+		77E7044A1729EA9B008AC158 /* NovoBlogPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E704481729EA98008AC158 /* NovoBlogPostViewController.xib */; };
 		77F063BD16E62C9B008FF9D7 /* PopulaBanco.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F063BC16E62C9B008FF9D7 /* PopulaBanco.m */; };
 		7C5EF13B1718BC040043AB67 /* BlogPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5EF1391718BC040043AB67 /* BlogPostsViewController.m */; };
 		7C5EF13C1718BC040043AB67 /* BlogPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5EF13A1718BC040043AB67 /* BlogPostsViewController.xib */; };
@@ -127,6 +129,9 @@
 		77BB956D171C8531006E588E /* PostDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDataSource.m; sourceTree = "<group>"; };
 		77BB956F171C86A5006E588E /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		77BB9570171C86A5006E588E /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		77E704461729EA97008AC158 /* NovoBlogPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NovoBlogPostViewController.h; sourceTree = "<group>"; };
+		77E704471729EA98008AC158 /* NovoBlogPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovoBlogPostViewController.m; sourceTree = "<group>"; };
+		77E704481729EA98008AC158 /* NovoBlogPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NovoBlogPostViewController.xib; sourceTree = "<group>"; };
 		77F063BB16E62C9B008FF9D7 /* PopulaBanco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopulaBanco.h; sourceTree = "<group>"; };
 		77F063BC16E62C9B008FF9D7 /* PopulaBanco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopulaBanco.m; sourceTree = "<group>"; };
 		7C5EF1381718BC040043AB67 /* BlogPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostsViewController.h; sourceTree = "<group>"; };
@@ -277,6 +282,9 @@
 				774E84F9172042A0008A5A57 /* BlogPostCell.h */,
 				774E84FA172042A0008A5A57 /* BlogPostCell.m */,
 				774E84FD172042D5008A5A57 /* BlogPostCell.xib */,
+				77E704461729EA97008AC158 /* NovoBlogPostViewController.h */,
+				77E704471729EA98008AC158 /* NovoBlogPostViewController.m */,
+				77E704481729EA98008AC158 /* NovoBlogPostViewController.xib */,
 			);
 			name = Posts;
 			sourceTree = "<group>";
@@ -443,6 +451,7 @@
 				774E84FE172042D5008A5A57 /* BlogPostCell.xib in Resources */,
 				774E850217204FCA008A5A57 /* no_image.png in Resources */,
 				7C7B95111725D7E60017429E /* estrela.png in Resources */,
+				77E7044A1729EA9B008AC158 /* NovoBlogPostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +522,7 @@
 				774E851517206DB0008A5A57 /* Autor.m in Sources */,
 				774E851817206DC1008A5A57 /* BlogPost.m in Sources */,
 				77509D821725F519001458FD /* MyTimer.m in Sources */,
+				77E704491729EA9B008AC158 /* NovoBlogPostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
